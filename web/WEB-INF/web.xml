@@ -6,4 +6,11 @@
     <welcome-file-list>
         <welcome-file>main.jsp</welcome-file>
     </welcome-file-list>
+
+    <resource-ref>
+        <description>JDBC connection</description>
+        <res-ref-name>jdbc/final_aitu</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
 </web-app>

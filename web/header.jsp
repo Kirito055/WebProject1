@@ -2,32 +2,29 @@
   Created by IntelliJ IDEA.
   User: User
   Date: 20.10.2020
-  Time: 19:00
+  Time: 19:56
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html><head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Astana IT University</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/gijgo.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+<html ><meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+<!-- CSS here -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/css/slicknav.css">
+<link rel="stylesheet" href="assets/css/flaticon.css">
+<link rel="stylesheet" href="assets/css/gijgo.css">
+<link rel="stylesheet" href="assets/css/animate.min.css">
+<link rel="stylesheet" href="assets/css/magnific-popup.css">
+<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="assets/css/themify-icons.css">
+<link rel="stylesheet" href="assets/css/slick.css">
+<link rel="stylesheet" href="assets/css/nice-select.css">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <!--? Preloader Start -->
@@ -67,8 +64,8 @@
                             </div>
                             <div class="header-info-right">
                                 <ul>
-                                    <li><a href="${pageContext.request.contextPath}/Login.jsp"><i class="ti-user"></i>Login</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/Registration.jsp"><i class="ti-lock"></i>Register</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/login.jsp"><i class="ti-user"></i>Login</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/registrate.jsp"><i class="ti-lock"></i>Register</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -77,14 +74,15 @@
             </div>
             <div class="header-bottom header-sticky">
                 <!-- Logo -->
-                <div class="logo d-none d-lg-block">
-                    <a href="index.html"><img src="https://astanait.edu.kz/wp-content/uploads/2020/05/aitu-logo-3.png" width="100" height="42" alt=""></a>
-                </div>
+                <%--<div class="logo d-none d-lg-block">
+                    <a href="index.html"><img src="assets/img/logo/astanait.png" height="32"  alt=""></a>
+                </div>--%>
+
                 <div class="container">
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo logo2 d-block d-lg-none">
-                            <a href="index.html"><img src="https://astanait.edu.kz/wp-content/uploads/2020/05/aitu-logo-3.png"   width="100" height="42" alt=""></a>
+                            <a href="index.html"><img src="assets/img/logo/astanait.png" height="32" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
@@ -92,7 +90,7 @@
                                 <ul id="navigation">
                                     <li><a href="${pageContext.request.contextPath}/main.jsp">Home</a></li>
                                     <li><a href="${pageContext.request.contextPath}/news.jsp">News</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/events.jsp">Events</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/club.jsp">Events</a></li>
                                     <li><a href="${pageContext.request.contextPath}/club.jsp">Clubs</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>

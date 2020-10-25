@@ -1,14 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
-  User: User
-  Date: 20.10.2020
-  Time: 20:06
+  User: 82530
+  Date: 17.10.2020
+  Time: 14:27
   To change this template use File | Settings | File Templates.
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Log In</title>
+    <title>Registrate</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -51,8 +53,8 @@
                                 </div>
                                 <div class="header-info-right">
                                     <ul>
-                                        <li><a href="${pageContext.request.contextPath}/Login.jsp"><i class="ti-user"></i>Login</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/Registrate.jsp"><i class="ti-lock"></i>Register</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/login.jsp"><i class="ti-user"></i>Login</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/register.jsp"><i class="ti-lock"></i>Register</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -71,26 +73,27 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-8 align-item-center">
-                <div class="border">
-                    <h3 class="bg-gray p-4">Log in</h3>
-                    <form action="${pageContext.request.contextPath}/ServletLogin" method="post">
+                <div class="border border">
+                    <h3 class="bg-gray p-4">Register </h3>
+                    <form action="${pageContext.request.contextPath}/Servlet" method="post">
                         <fieldset class="p-4">
-                            <input type="text" name="username" placeholder="Username" class="border p-3 w-100 my-2">
-                            <input type="password" name="password" placeholder="Password" class="border p-3 w-100 my-2">
-                            <div class="loggedin-forgot">
-                                <input type="checkbox" id="keep-me-logged-in">
-                                <label for="keep-me-logged-in" class="pt-3 pb-2">Keep me logged in</label>
+                            <input type="email" name="email" placeholder="Email*" class="border p-3 w-100 my-2">
+                            <input type="text" name="username" placeholder="Username*" class="border p-3 w-100 my-2">
+                            <input type="password" name="password" placeholder="Password*" class="border p-3 w-100 my-2">
+
+                            <div class="loggedin-forgot d-inline-flex my-3">
+                                <input type="checkbox" id="registering" class="mt-1">
+                                <label for="registering" class="px-2">By registering, you accept our <a class="text-primary font-weight-bold" href="terms-condition.html">Terms & Conditions</a></label>
                             </div>
-                            <button type="submit" class="d-block py-3 px-5 bg-primary text-white border-0 rounded font-weight-bold mt-3">Log in</button>
-                            <a class="mt-3 d-block  text-primary" href="#">Forget Password?</a>
-                            <a class="mt-3 d-inline-block text-primary" href="register.html">Register Now</a>
+                            <button type="submit" class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">Register Now</button>
                         </fieldset>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
 </section>
+
+
 </body>
 </html>
