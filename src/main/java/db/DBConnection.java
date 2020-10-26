@@ -30,7 +30,7 @@ public class DBConnection {
         return connection;
     }
 
-    protected ArrayList<Club> clubSelect(Connection connection)
+    public ArrayList<Club> clubSelect(Connection connection)
     {
         ArrayList<Club> clubs = new ArrayList();
         try

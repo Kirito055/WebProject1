@@ -5,6 +5,9 @@
   Time: 19:56
   To change this template use File | Settings | File Templates.
 --%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fn" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html><meta name="description" content="">
@@ -25,7 +28,7 @@
 <link rel="stylesheet" href="assets/css/slick.css">
 <link rel="stylesheet" href="assets/css/nice-select.css">
 <link rel="stylesheet" href="assets/css/style.css">
-</head>
+</html>
 <body>
 <!--? Preloader Start -->
 <div id="preloader-active">
@@ -89,8 +92,8 @@
                                 <ul id="navigation">
                                     <li><a href="${pageContext.request.contextPath}/main.jsp">Home</a></li>
                                     <li><a href="${pageContext.request.contextPath}/news.jsp">News</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/club.jsp">Events</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/club.jsp">Clubs</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/">Events</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
