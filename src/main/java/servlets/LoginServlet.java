@@ -1,7 +1,7 @@
-package main.java.servlets;
+package servlets;
 
 
-import main.java.models.User;
+import models.User;
 
 
 import javax.servlet.ServletException;

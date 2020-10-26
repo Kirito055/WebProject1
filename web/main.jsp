@@ -12,9 +12,7 @@
                                 <span data-animation="fadeInLeft" data-delay=".2s">Astana IT University</span>
                                 <h1 data-animation="fadeInLeft" data-delay=".4s">Become part of your country's digital history</h1>
                                 <!-- Hero-btn -->
-                                <div class="hero__btn">
-                                    <a href="industries.html" class="btn hero-btn"  data-animation="fadeInLeft" data-delay=".8s">Get Started</a>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-5">
@@ -68,7 +66,7 @@
                             <li><span class="flaticon-graduated"></span> Have suffered alteration in so</li>
                             <li><span class="flaticon-tools-and-utensils"></span> Randomised words whi</li>
                         </ul>
-                        <a href="about.html" class="btn">Аdmission Rules</a>
+                        <a href="about.html" class="btn">Admission Rules</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
@@ -258,7 +256,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">БЕКІШ ЗАМИРА ЕРЛАНОВНА</a></h3>
+                            <h3><a href="instructor.html">BEKISH ZAMIRA ERLANOVNA</a></h3>
                             <p>ICT</p>
                         </div>
                     </div>
@@ -275,7 +273,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">ХАЙМУЛЬДИН АСКАР ГАЗИЗУЛЫ</a></h3>
+                            <h3><a href="instructor.html">HAYMULDIN ASKAR GAZIZULY</a></h3>
                             <p>Java developer</p>
                         </div>
                     </div>
@@ -292,7 +290,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">МАНГЛАЕВ ТАЛГАТ ТУРАНБЕКУЛЫ</a></h3>
+                            <h3><a href="instructor.html">MANGLAYEV TALGAT TURANBEKULA</a></h3>
                             <p>Advanced Java Programming</p>
                         </div>
                     </div>
@@ -309,7 +307,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">СЕЙТЕНОВ АЛТЫНБЕК СЕРИКОВИЧ</a></h3>
+                            <h3><a href="instructor.html">ALTYNBEK SERIKOVICH SEYTENOV</a></h3>
                             <p>ICT</p>
                         </div>
                     </div>
@@ -341,7 +339,7 @@
                             </div>
                             <!-- Testimonial Content -->
                             <div class="testimonial-caption text-center">
-                                <p>You can’t succeed if you just do what others do and
+                                <p>You can not succeed if you just do what others do and
                                     follow the well-worn path. You need to create a new and
                                     original path for yourself.</p>
                                 <!-- Rattion -->

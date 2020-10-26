@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<html ><meta name="description" content="">
+<html><meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="manifest" href="site.webmanifest">
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -64,8 +64,7 @@
                             </div>
                             <div class="header-info-right">
                                 <ul>
-                                    <li><a href="${pageContext.request.contextPath}/login.jsp"><i class="ti-user"></i>Login</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/registrate.jsp"><i class="ti-lock"></i>Register</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/servletlog"><i class="ti-user"></i>Log out</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -99,7 +98,7 @@
                         <!-- Header-btn -->
                         <div class="header-search d-none d-lg-block">
                             <form action="#" class="form-box f-right ">
-                                <input type="text" name="Search" placeholder="Search Courses">
+                                <input type="text" name="Search" placeholder="Search">
                                 <div class="search-icon">
                                     <i class="fas fa-search special-tag"></i>
                                 </div>
