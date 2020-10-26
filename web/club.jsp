@@ -31,7 +31,8 @@
                             <h4><input class="border p-2 w-100 my-2" type="text" name="clubName" placeholder="club name" value="<c:out value="${club.name}"/>"></h4>
                             <input class="border p-2 w-100 my-2" type="text" name="leader_id" placeholder="Leader ID" value="<c:out value="${club.leader_id}"/>"><br>
                             <input class="border p-2 w-100 my-2" type="url" name="logo" placeholder="logo url" value="<c:out value="${club.logo}"/>"><br>
-                            <input class="border p-2 w-100 my-2" type="text" name="description" placeholder="description" value="<c:out value="${club.description}"/>">
+                            <textarea class="border p-2 w-100 my-2" type="text" name="description" placeholder="description" ><c:out value="${club.description}"/></textarea>
+
                         </div>
                         <div class="course-cap-bottom d-flex justify-content-between">
                             <ul>
