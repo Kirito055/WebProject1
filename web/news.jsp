@@ -21,106 +21,41 @@
             <div class="row">
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
+
+                        <!--Post News-->
                         <article class="blog_item">
                             <div class="blog_item_img">
                                 <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="">
                                 <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
+                                    <h3>Day</h3>
+                                    <p>Mon</p><!--3 буквы!!!!-->
                                 </a>
                             </div>
                             <div class="blog_details">
                                 <a class="d-inline-block" href="blog_details.html">
-                                    <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
+                         <!--News Title--><h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
                                 </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
+                         <!--News text--><p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                     he earth it first without heaven in place seed it second morning saying.</p>
                                 <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i> Author name (Username) </a></li>
+
+                                    <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
+                                    <li><a href="news_form/update_news.jsp"> Update news  </a></li>
+
                                 </ul>
                             </div>
                         </article>
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/single_blog_2.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="blog_details.html">
-                                    <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
+
+                        <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
+                        <article>
+                            <a class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                               type="button" href="news_form/add_news.jsp">
+                                Add news
+                            </a>
                         </article>
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/single_blog_3.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="blog_details.html">
-                                    <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/single_blog_4.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="blog_details.html">
-                                    <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/single_blog_5.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="blog_details.html">
-                                    <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
+
+                        <!--кнопки для перехода на другие страницы-->
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                                 <li class="page-item">
@@ -141,15 +76,20 @@
                                 </li>
                             </ul>
                         </nav>
+
                     </div>
                 </div>
+
+
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
+
+                        <!--search for news-->
                         <aside class="single_sidebar_widget search_widget">
                             <form action="#">
                                 <div class="form-group">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder='Search Keyword'
+                                        <input type="text" class="form-control" placeholder='Search News'
                                                onfocus="this.placeholder = ''"
                                                onblur="this.placeholder = 'Search Keyword'">
                                         <div class="input-group-append">
@@ -158,50 +98,32 @@
                                     </div>
                                 </div>
                                 <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search</button>
+                                        type="submit">Search
+                                </button>
                             </form>
                         </aside>
+
+                        <!--category-->
                         <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title" style="color: #2d2d2d;">Category</h4>
                             <ul class="list cat-list">
                                 <li>
                                     <a href="#" class="d-flex">
-                                        <p>Resaurant food</p>
-                                        <p>(37)</p>
+                                        <p>Category name</p>
+                                        <p>(count of news)</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" class="d-flex">
-                                        <p>Travel news</p>
+                                        <p>Example: Study news</p>
                                         <p>(10)</p>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Modern technology</p>
-                                        <p>(03)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Product</p>
-                                        <p>(11)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Inspiration</p>
-                                        <p>21</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Health Care (21)</p>
-                                        <p>09</p>
-                                    </a>
-                                </li>
+
                             </ul>
                         </aside>
+
+                        <!--List of last 4 news-->
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
                             <div class="media post_item">

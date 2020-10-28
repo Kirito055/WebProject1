@@ -3,7 +3,43 @@
     <div class="footer-area footer-bg">
         <div class="container">
             <div class="footer-top footer-padding">
-
+                <!-- footer Heading -->
+                <div class="footer-heading">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-6 col-lg-7 col-md-10">
+                            <div class="footer-tittle2">
+                                <h4>Stay Updated</h4>
+                            </div>
+                            <!-- Form -->
+                            <div class="footer-form mb-50">
+                                <div id="mc_embed_signup">
+                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                        <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                                        <div class="form-icon">
+                                            <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
+                                                Subscribe Now
+                                            </button>
+                                        </div>
+                                        <div class="mt-10 info"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5">
+                            <div class="footer-tittle2">
+                                <h4>Let’s Get Social</h4>
+                            </div>
+                            <!-- Footer Social -->
+                            <div class="footer-social">
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a  href="#"><i class="fab fa-google"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- Footer Menu -->
                 <div class="row d-flex justify-content-between">
                     <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
@@ -71,7 +107,7 @@
                         <div class="footer-copy-right text-center">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright&copy;All Rights Reserved 2020, Astana IT University <br>
-                                Design and Developed By Daulet, Dariya, Talgat, Akniet, Eldar
+                                Design and Developed By Дулет,Дария,Талгат,Акниет,Эльдар
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div>
                     </div>

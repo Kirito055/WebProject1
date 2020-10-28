@@ -74,7 +74,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-8 align-item-center">
                 <div class="border border">
-                    <h3 class="bg-gray p-4">Register </h3>
+                    <h3 class="bg-gray p-4">Update News</h3>
                     <form action="${pageContext.request.contextPath}/Servlet" method="post">
                         <fieldset class="p-4">
                             <input type="email" name="email" placeholder="Email*" class="border p-3 w-100 my-2">
@@ -89,6 +89,25 @@
                         </fieldset>
                     </form>
                 </div>
+
+                <div class="border border">
+
+                <h3 class="bg-gray p-4">Add News</h3>
+                <form action="${pageContext.request.contextPath}/Servlet" method="post">
+                    <fieldset class="p-4">
+                        <input type="email" name="email" placeholder="Email*" class="border p-3 w-100 my-2">
+                        <input type="text" name="username" placeholder="Username*" class="border p-3 w-100 my-2">
+                        <input type="password" name="password" placeholder="Password*" class="border p-3 w-100 my-2">
+
+                        <div class="loggedin-forgot d-inline-flex my-3">
+                            <input type="checkbox" id="registering" class="mt-1">
+                            <label for="registering" class="px-2">By registering, you accept our <a class="text-primary font-weight-bold" href="terms-condition.html">Terms & Conditions</a></label>
+                        </div>
+                        <button type="submit" class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">Register Now</button>
+                    </fieldset>
+                </form>
+            </div>
+
             </div>
         </div>
     </div>
