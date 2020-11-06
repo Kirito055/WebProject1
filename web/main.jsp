@@ -72,7 +72,7 @@
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="assets/img/commisia.jpg">
+                        <img src="assets/img/commisia.jpg" alt="">
                     </div>
                 </div>
             </div>

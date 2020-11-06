@@ -12,22 +12,22 @@
 
 <html><meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="manifest" href="site.webmanifest">
-<link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
+<link rel="manifest" href="${pageContext.request.contextPath}site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/assets/img/favicon.ico">
 
 <!-- CSS here -->
-<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
-<link rel="stylesheet" href="../assets/css/slicknav.css">
-<link rel="stylesheet" href="../assets/css/flaticon.css">
-<link rel="stylesheet" href="../assets/css/gijgo.css">
-<link rel="stylesheet" href="../assets/css/animate.min.css">
-<link rel="stylesheet" href="../assets/css/magnific-popup.css">
-<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
-<link rel="stylesheet" href="../assets/css/themify-icons.css">
-<link rel="stylesheet" href="../assets/css/slick.css">
-<link rel="stylesheet" href="../assets/css/nice-select.css">
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slicknav.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/flaticon.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/gijgo.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/animate.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/themify-icons.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slick.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nice-select.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
 </html>
 <body>
 <!--? Preloader Start -->
@@ -84,7 +84,7 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo logo2 d-block d-lg-none">
-                            <a href="index.html"><img src="assets/img/logo/astanait.png" height="32" alt=""></a>
+                            <a href="${pageContext.request.contextPath}index.jsp"><img src="${pageContext.request.contextPath}assets/img/logo/astanait.png" height="32" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
