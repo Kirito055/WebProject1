@@ -7,6 +7,7 @@
         <welcome-file>main.jsp</welcome-file>
     </welcome-file-list>
 
+    <!--db-->
     <resource-ref>
         <description>JDBC connection</description>
         <res-ref-name>jdbc/final_aitu</res-ref-name>
@@ -22,5 +23,14 @@
     <servlet-mapping>
         <servlet-name>clubs</servlet-name>
         <url-pattern>/clubs</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>log</servlet-name>
+        <servlet-class>servlets.LogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>log</servlet-name>
+        <url-pattern>/log</url-pattern>
     </servlet-mapping>
 </web-app>
