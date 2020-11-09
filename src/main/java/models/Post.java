@@ -10,6 +10,16 @@ public class Post {
     private int club_id;
     private String type;
 
+    public Post(String title, String descrition, String date, String image, int user_id, int club_id, String type) {
+        this.title = title;
+        this.descrition = descrition;
+        this.date = date;
+        this.image = image;
+        this.user_id = user_id;
+        this.club_id = club_id;
+        this.type = type;
+    }
+
     public Post(String[] postfields)
     {
         if(postfields.length == 7)
@@ -33,6 +43,7 @@ public class Post {
             this.club_id= Integer.parseInt(postfields[6]);
             this.type=postfields[7];
         }
+
     }
     public int getId() {
         return id;
