@@ -1,53 +1,53 @@
 package servlets;
 
-import client.PostClient;
+import db.DBConnection;
+import models.Club;
+import models.Post;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class EventServlet extends HttpServlet {
-
+    DBConnection db=new DBConnection();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String submit = req.getParameter("submit");
         switch (submit) {
-            case "add": {
+            case "add":
+            {
                 String title = req.getParameter("title");
-                String description = req.getParameter("userId");
-                String date = req.getParameter("date");
-                String image = req.getParameter("image");
-                int user_id = Integer.parseInt(req.getParameter("user_id"));
-                int club_id = Integer.parseInt(req.getParameter("club_id"));
+                String  description= req.getParameter("userId");
+                String date=req.getParameter("date");
+                String image=req.getParameter("image");
+                int user_id= Integer.parseInt(req.getParameter("user_id"));
+                int club_id= Integer.parseInt(req.getParameter("club_id"));
 
-               // postControl.addEvent(new Post(title, description, date, image, user_id, club_id, "event"));
+                int added=0;
 
+
+                    added = db.Addevent(title,description,date,image,user_id,club_id);
+
+
+
+                req.setAttribute("events", "ae"+added);
                 break;
             }
-            case "update": {
+            case "delete":
+            {
                 String id = req.getParameter("id");
-                String title = req.getParameter("title");
-                String description = req.getParameter("userId");
-                String date = req.getParameter("date");
-                String image = req.getParameter("image");
-                int user_id = Integer.parseInt(req.getParameter("user_id"));
-                int club_id = Integer.parseInt(req.getParameter("club_id"));
-
-              //  postControl.updateEvent(new Post(Integer.parseInt(id),title, description, date, image, user_id, club_id, "event"));
-
-                break;
-            }
-            case "delete": {
-                String id = req.getParameter("id");
-
-               // postControl.removeEvent(Integer.parseInt(id));
-
+                int deleted =db.deletePost(Integer.parseInt(id));
+                req.setAttribute("events", "d"+deleted);
                 break;
             }
 
-            default: {
+            default:
+            {
                 req.setAttribute("events", "s");
                 break;
             }
@@ -58,9 +58,17 @@ public class EventServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-      request.setAttribute("eventsALL", PostClient.getAll());
-
+        try
+        {
+            Connection connection = db.getConnection();
+            ArrayList<Post> events = db.eventSelect(connection);
+            connection.close();
+            request.setAttribute("events", events);
+        }
+        catch (SQLException exception)
+        {
+            exception.printStackTrace();
+        }
         request.getRequestDispatcher("event.jsp").forward(request, response);
     }
 }
