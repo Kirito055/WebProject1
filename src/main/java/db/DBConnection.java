@@ -1,6 +1,7 @@
 package db;
 
 import models.Club;
+import models.Post;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -60,6 +61,39 @@ public class DBConnection {
             sqlException.printStackTrace();
         }
         return clubs;
+    }
+
+
+
+    public ArrayList<Post> eventSelect(Connection connection)
+    {
+        ArrayList<Post> events = new ArrayList();
+        try
+        {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM posts where type ='event'");
+            ResultSetMetaData metaData = resultSet.getMetaData();
+            int numberOfColumns = metaData.getColumnCount();
+            Post post;
+            while (resultSet.next())
+            {
+                String[] eventFields = new String[numberOfColumns];
+                for(int a=1; a<=numberOfColumns; a++)
+                {
+                    eventFields[a-1] = resultSet.getObject(a).toString();
+                }
+                post = new Post(eventFields);
+                events.add(post);
+            }
+            resultSet.close();
+            connection.close();
+            statement.close();
+        }
+        catch (SQLException sqlException)
+        {
+            sqlException.printStackTrace();
+        }
+        return events;
     }
 
 }
