@@ -11,26 +11,31 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html><meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="manifest" href="${pageContext.request.contextPath}site.webmanifest">
-<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/assets/img/favicon.ico">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="${pageContext.request.contextPath}site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/assets/img/favicon.ico">
 
-<!-- CSS here -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.carousel.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slicknav.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/flaticon.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/gijgo.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/animate.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/magnific-popup.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/fontawesome-all.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/themify-icons.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slick.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nice-select.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
-</html>
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/profile.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slicknav.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/flaticon.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/gijgo.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/animate.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slick.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nice-select.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <title></title>
+</head>
 <body>
 <!--? Preloader Start -->
+<!--
 <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-inner position-relative">
@@ -41,6 +46,8 @@
         </div>
     </div>
 </div>
+-->
+
 <!-- Preloader Start -->
 <header>
     <!-- Header Start -->
@@ -84,7 +91,7 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo logo2 d-block d-lg-none">
-                            <a href="${pageContext.request.contextPath}index.jsp"><img src="${pageContext.request.contextPath}assets/img/logo/astanait.png" height="32" alt=""></a>
+                            <a href="${pageContext.request.contextPath}index.jsp"><img src="${pageContext.request.contextPath}/assets/img/logo/astanait.png" height="32" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
@@ -94,7 +101,7 @@
                                     <li><a href="${pageContext.request.contextPath}/news.jsp">News</a></li>
                                     <li><a href="${pageContext.request.contextPath}/">Events</a></li>
                                     <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/profile.jsp">Profile</a></li>
                                 </ul>
                             </nav>
                         </div>
