@@ -33,6 +33,7 @@ public class EventServlet extends HttpServlet {
                 break;
             }
             case "update": {
+                String id = req.getParameter("id");
                 String title = req.getParameter("title");
                 String description = req.getParameter("userId");
                 String date = req.getParameter("date");
@@ -40,7 +41,7 @@ public class EventServlet extends HttpServlet {
                 int user_id = Integer.parseInt(req.getParameter("user_id"));
                 int club_id = Integer.parseInt(req.getParameter("club_id"));
 
-                postControl.updateEvent(new Post(title, description, date, image, user_id, club_id, "event"));
+                postControl.updateEvent(new Post(Integer.parseInt(id),title, description, date, image, user_id, club_id, "event"));
 
                 break;
             }
