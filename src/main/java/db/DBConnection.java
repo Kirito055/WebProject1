@@ -1,6 +1,6 @@
 package db;
 
-import models.Club;
+import models.Post;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -31,35 +31,5 @@ public class DBConnection {
         return connection;
     }
 
-    public ArrayList<Club> clubSelect(Connection connection)
-    {
-        ArrayList<Club> clubs = new ArrayList();
-        try
-        {
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM clubs");
-            ResultSetMetaData metaData = resultSet.getMetaData();
-            int numberOfColumns = metaData.getColumnCount();
-            Club club;
-            while (resultSet.next())
-            {
-                String[] clubFields = new String[numberOfColumns];
-                for(int a=1; a<=numberOfColumns; a++)
-                {
-                    clubFields[a-1] = resultSet.getObject(a).toString();
-                }
-                club = new Club(clubFields);
-                clubs.add(club);
-            }
-            resultSet.close();
-            connection.close();
-            statement.close();
-        }
-        catch (SQLException sqlException)
-        {
-            sqlException.printStackTrace();
-        }
-        return clubs;
-    }
 
 }
