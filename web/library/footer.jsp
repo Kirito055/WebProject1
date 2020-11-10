@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-xl-5 col-lg-5">
                             <div class="footer-tittle2">
-                                <h4>Let’s Get Social</h4>
+                                <h4>Let's Get Social</h4>
                             </div>
                             <!-- Footer Social -->
                             <div class="footer-social">
@@ -107,7 +107,7 @@
                         <div class="footer-copy-right text-center">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright&copy;All Rights Reserved 2020, Astana IT University <br>
-                                Design and Developed By Дулет,Дария,Талгат,Акниет,Эльдар
+                                Design and Developed By Daulet, Dariya, Talgat, Akniet, Eldiar
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div>
                     </div>

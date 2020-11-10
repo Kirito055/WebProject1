@@ -99,7 +99,7 @@
                                 <ul id="navigation">
                                     <li><a href="${pageContext.request.contextPath}/main.jsp">Home</a></li>
                                     <li><a href="${pageContext.request.contextPath}/news.jsp">News</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/">Events</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/event.jsp">Events</a></li>
                                     <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
                                     <li><a href="${pageContext.request.contextPath}/profile.jsp">Profile</a></li>
                                 </ul>
