@@ -10,7 +10,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fn" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<html><meta name="description" content="">
+<html>
+<meta name="description" content="">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="${pageContext.request.contextPath}site.webmanifest">
@@ -60,7 +61,7 @@
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                     </ul>
                 </div>
                 <div class="container">
@@ -74,7 +75,8 @@
                             </div>
                             <div class="header-info-right">
                                 <ul>
-                                    <li><a href="${pageContext.request.contextPath}/log"><i class="ti-user"></i>Log out</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/log"><i class="ti-user"></i>Log out</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -91,7 +93,9 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo logo2 d-block d-lg-none">
-                            <a href="${pageContext.request.contextPath}index.jsp"><img src="${pageContext.request.contextPath}/assets/img/logo/astanait.png" height="32" alt=""></a>
+                            <a href="${pageContext.request.contextPath}index.jsp"><img
+                                    src="${pageContext.request.contextPath}/assets/img/logo/astanait.png" height="32"
+                                    alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
@@ -106,13 +110,27 @@
                             </nav>
                         </div>
                         <!-- Header-btn -->
-                        <div class="header-search d-none d-lg-block">
+                        <div class="header-search col d-none d-lg-block">
+
                             <form action="#" class="form-box f-right ">
                                 <input type="text" name="Search" placeholder="Search">
-                                <div class="search-icon">
+                                <div class="search-icon dropdown-toggle" id="dropdownMenuButton"
+                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-search special-tag"></i>
                                 </div>
                             </form>
+                            <div class="dropdown-menu result" aria-labelledby="dropdownMenuButton">
+                                <a href="">Name, group</a>
+                                <a href="">Name, group</a>
+                                <a href="">Name, group</a>
+                                <a href="">Name, group</a>
+                                <a href="">Name, group</a>
+                                <a href="">Name, group</a>
+                                <a href="">Name, group</a>
+                                <a href="">Name, group</a>
+                                <a href="">Name, group</a>
+                            </div>
+
                         </div>
                     </div>
                     <!-- Mobile Menu -->

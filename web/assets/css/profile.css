@@ -65,3 +65,26 @@
         height: 30vmin;
     }
 }
+.result {
+    width: 300px;
+    max-height: 200px;
+    display: block;
+    overflow-y: scroll;
+}
+
+.result a {
+    height: 40px;
+    padding: 2%;
+    list-style: none;
+    border: 1px solid rgb(185, 184, 184);
+    transition: ease-in-out 0.5s;
+}
+
+.result a:hover {
+    color: white;
+    background-color:  rgba(168, 218, 233, .8);
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
