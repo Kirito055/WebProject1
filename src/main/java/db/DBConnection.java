@@ -64,11 +64,12 @@ public class DBConnection {
         return clubs;
     }
 
-    public Stack<User> profileSelect(Connection connection)
+    public Stack<User> profileSelect()
     {
         Stack<User> users = new Stack<>();
         try
         {
+            Connection connection=getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM users where id=3");
             ResultSetMetaData metaData = resultSet.getMetaData();
@@ -94,5 +95,72 @@ public class DBConnection {
         }
         return users;
     }
+    public int addClub(String clubName,int leader_id,String logo,String description)
+    {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        int added = 0;
+        try
+        {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("insert into clubs (name, leader_id, logo,description) values (?, ?, ?, ?)");
+            preparedStatement.setString(1, clubName);
+            preparedStatement.setInt(2, leader_id);
+            preparedStatement.setString(3, logo);
+            preparedStatement.setString(4, description);
+            added = preparedStatement.executeUpdate();
+            connection.close();
+            preparedStatement.close();
+        }
+        catch (SQLException sqlException)
+        {
+            sqlException.printStackTrace();
+        }
+        return added;
+    }
 
+    public int updateClub(int id, String name,int leader_id,String logo,String description)
+    {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        int updated = 0;
+        try
+        {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("update clubs set name=?, leader_id=?, logo=?, description=? where id=?");
+            preparedStatement.setString(1, name);
+            preparedStatement.setInt(2, leader_id);
+            preparedStatement.setString(3,logo);
+            preparedStatement.setString(4, description);
+            preparedStatement.setInt(5, id);
+            updated = preparedStatement.executeUpdate();
+            connection.close();
+            preparedStatement.close();
+        }
+        catch (SQLException sqlException)
+        {
+            sqlException.printStackTrace();
+        }
+        return updated;
+    }
+    public int delete(String id)
+    {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        int deleted = 0;
+        try
+        {
+            connection = getConnection();
+            preparedStatement = connection.prepareStatement("delete from clubs where clubs.id = ?");
+            preparedStatement.setString(1, id);
+            deleted = preparedStatement.executeUpdate();
+            connection.close();
+            preparedStatement.close();
+        }
+        catch (SQLException sqlException)
+        {
+            sqlException.printStackTrace();
+        }
+        return deleted;
+    }
 }
