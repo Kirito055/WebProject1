@@ -1,0 +1,48 @@
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.search {
+    width: 100%;
+}
+
+.search form {  width: 100%;
+    padding: 10px;
+    background-color: rgb(140, 150, 194);
+}
+
+.search form select,
+.search form input,
+.search form button {
+    border-radius: 15px;
+    padding: 8px;
+    outline: none;
+}
+
+.search form select,
+.search form button {
+    background-color: black;
+    color: white;
+}
+
+.search-result {
+    width: 100%;
+    max-height: 500px;
+    display: block;
+    overflow-y: scroll;
+}
+
+.search-result .res-card {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .6);
+    width: 90%;
+    margin: 2% auto;
+    padding: 2%;
+    border: 1px solid rgb(185, 184, 184);
+    transition: ease-in-out 0.5s;
+}
+
+.search-result .res-card:hover {
+    color: white;
+    background-color: rgb(146, 148, 255);
+}

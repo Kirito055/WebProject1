@@ -19,6 +19,7 @@
 
 
     <!-- CSS here -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/search.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/profile.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.carousel.min.css">
@@ -106,32 +107,16 @@
                                     <li><a href="${pageContext.request.contextPath}/event.jsp">Events</a></li>
                                     <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
                                     <li><a href="${pageContext.request.contextPath}/profile.jsp">Profile</a></li>
+                                    <li>
+                                        <a href="${pageContext.request.contextPath}/search.jsp" class="search-icon"
+                                           aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-search special-tag"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
-                        <!-- Header-btn -->
-                        <div class="header-search col d-none d-lg-block">
 
-                            <form action="#" class="form-box f-right ">
-                                <input type="text" name="Search" placeholder="Search">
-                                <div class="search-icon dropdown-toggle" id="dropdownMenuButton"
-                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-search special-tag"></i>
-                                </div>
-                            </form>
-                            <div class="dropdown-menu result" aria-labelledby="dropdownMenuButton">
-                                <a href="">Name, group</a>
-                                <a href="">Name, group</a>
-                                <a href="">Name, group</a>
-                                <a href="">Name, group</a>
-                                <a href="">Name, group</a>
-                                <a href="">Name, group</a>
-                                <a href="">Name, group</a>
-                                <a href="">Name, group</a>
-                                <a href="">Name, group</a>
-                            </div>
-
-                        </div>
                     </div>
                     <!-- Mobile Menu -->
                     <div class="col-12">
