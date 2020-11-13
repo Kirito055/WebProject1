@@ -1,7 +1,6 @@
 package servlets;
 
-import controllers.PostController;
-import db.DBConnection;
+import client.PostClient;
 import models.Post;
 
 import javax.servlet.ServletException;
@@ -9,12 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class EventServlet extends HttpServlet {
-    private final PostController postControl = new PostController();
+    private final PostClient postControl = new PostClient();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

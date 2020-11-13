@@ -1,11 +1,11 @@
-package controllers;
+package client;
 
 import models.Post;
 import service.PostService;
 
 import java.util.ArrayList;
 
-public class PostController {
+public class PostClient {
     private final PostService postServ = new PostService();
 
     public ArrayList<Post> selectAll() {
@@ -23,4 +23,6 @@ public class PostController {
     public void removeEvent(int id) {
         postServ.removeEvent(id);
     }
+
+
 }
