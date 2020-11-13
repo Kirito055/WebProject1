@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class ClubServlet extends HttpServlet {
-    private final ClubClient clubControl = new ClubClient();
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -18,7 +18,7 @@ public class ClubServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("clubs", clubControl.getAll());
+        request.setAttribute("clubs",ClubClient.getAll());
         request.getRequestDispatcher("club.jsp").forward(request, response);
     }
 }
