@@ -24,7 +24,7 @@ public class EventServlet extends HttpServlet {
                 int user_id = Integer.parseInt(req.getParameter("user_id"));
                 int club_id = Integer.parseInt(req.getParameter("club_id"));
 
-                postControl.addEvent(new Post(title, description, date, image, user_id, club_id, "event"));
+               // postControl.addEvent(new Post(title, description, date, image, user_id, club_id, "event"));
 
                 break;
             }
@@ -37,14 +37,14 @@ public class EventServlet extends HttpServlet {
                 int user_id = Integer.parseInt(req.getParameter("user_id"));
                 int club_id = Integer.parseInt(req.getParameter("club_id"));
 
-                postControl.updateEvent(new Post(Integer.parseInt(id),title, description, date, image, user_id, club_id, "event"));
+              //  postControl.updateEvent(new Post(Integer.parseInt(id),title, description, date, image, user_id, club_id, "event"));
 
                 break;
             }
             case "delete": {
                 String id = req.getParameter("id");
 
-                postControl.removeEvent(Integer.parseInt(id));
+               // postControl.removeEvent(Integer.parseInt(id));
 
                 break;
             }
@@ -61,7 +61,7 @@ public class EventServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        request.setAttribute("events", postControl.selectAll());
+      //  request.setAttribute("events", postControl.selectAll());
 
         request.getRequestDispatcher("event.jsp").forward(request, response);
     }
