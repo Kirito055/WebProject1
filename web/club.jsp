@@ -15,8 +15,8 @@
     </div>
 </section>-->
 <style>
-    .button {
-        background-color: #4CAF50; /* Green */
+    .button1 {
+
         border: none;
         color: white;
         padding: 5px 20px;
@@ -84,40 +84,22 @@
                         </div>
                         <div class="course-cap-bottom d-flex justify-content-between">
                             <ul>
-                                <input class="button button2" name="submit" type="submit" value="Edit">
+                                <a href="${pageContext.request.contextPath}/clubs?action=edit&id=<c:out value="${club.id}"/>"><input class="button button2" type="button" name="action" value="Edit"></a>
                             </ul>
-                            <input class="button button3" name="submit" type="submit" value="Delete">
+                            <input class="button button3" name="action" type="submit" value="Delete">
                         </div>
                     </div>
                 </div>
             </div>
         </form>
     </c:forEach>
-</div
-
-<section class="login py-5 border-top-1">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-5 col-md-8 align-item-center">
-
-                <div class="border border">
-
-                    <h3 class="bg-gray p-4">Add Post</h3>
-                    <form action="${pageContext.request.contextPath}/clubs" method="post">
-                        <fieldset class="p-4">
-                            <input type="text" name="clubName" placeholder="clubName" class="border p-3 w-100 my-2">
-                            <input type="text" name="leader_id" placeholder="leader_id" class="border p-3 w-100 my-2">
-                            <input type="url" name="logo" placeholder="logo" class="border p-3 w-100 my-2">
-                            <input type="text" name="description" placeholder="description" class="border p-3 w-100 my-2">
+</div>
+<article>
+    <a class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+       type="button" href="${pageContext.request.contextPath}/add_club.jsp">
+        Add Club
+    </a>
+</article>
 
 
-                            <input type="submit" class="d-block py-1 px-3 bg-primary text-white border-0 rounded font-weight-bold mt-3" name="submit" value="add">
-                        </fieldset>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
 <%@include file="library/footer.jsp"%> <%--There we include footer--%>

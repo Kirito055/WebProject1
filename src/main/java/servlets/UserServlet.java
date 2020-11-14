@@ -19,10 +19,10 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //Connection connection = db.getConnection();
-        Stack<User> users = db.profileSelect();
+        //Stack<User> users = db.profileSelect();
         //connection.close();
-        System.out.println(users);
-        request.setAttribute("users", users);
+        //System.out.println(users);
+        //request.setAttribute("users", users);
         request.getRequestDispatcher("profile.jsp").forward(request, response);
     }
 }
