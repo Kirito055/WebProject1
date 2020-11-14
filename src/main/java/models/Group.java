@@ -15,6 +15,11 @@ public class Group {
         this.faculty = faculty;
     }
 
+    public Group( String name, String faculty) {
+        this.name = name;
+        this.faculty = faculty;
+    }
+
     public long getId() {
         return id;
     }
