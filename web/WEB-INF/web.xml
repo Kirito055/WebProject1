@@ -16,7 +16,24 @@
         <res-auth>Container</res-auth>
     </resource-ref>
     
-    
+    <servlet>
+        <servlet-name>news</servlet-name>
+        <servlet-class>servlets.NewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>news</servlet-name>
+        <url-pattern>/news</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>events</servlet-name>
+        <servlet-class>servlets.EventServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>events</servlet-name>
+        <url-pattern>/events</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>clubs</servlet-name>
         <servlet-class>servlets.ClubServlet</servlet-class>

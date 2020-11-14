@@ -1,5 +1,7 @@
 package models;
 
+import client.ClubClient;
+import client.UserClient;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.sql.Date;
@@ -14,7 +16,10 @@ public class Post {
     private long clubId;
     private String type;
 
-    public Post(){
+    private Club club = null;
+    private User author = null;
+
+    public Post() {
 
     }
 
@@ -27,6 +32,15 @@ public class Post {
         this.userId = userId;
         this.clubId = clubId;
         this.type = type;
+
+        if (author == null) {
+            author = UserClient.get(userId);
+        }
+        if (club  == null) {
+            club = ClubClient.get(clubId);
+        }
+
+
     }
 
     public long getId() {
@@ -52,7 +66,8 @@ public class Post {
     public void setDescription(String description) {
         this.description = description;
     }
-    @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     public Date getDate() {
         return date;
     }
@@ -92,6 +107,11 @@ public class Post {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public User getAuthor() {
+
+        return UserClient.get(getUserId());
     }
 }
 
