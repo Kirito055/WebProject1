@@ -49,7 +49,7 @@
     </div>
 </div>
 -->
-
+<c:set var="user" value="${sessionScope.user}"/>
 <!-- Preloader Start -->
 <header>
     <!-- Header Start -->
@@ -76,8 +76,16 @@
                             </div>
                             <div class="header-info-right">
                                 <ul>
+                                    <c:choose>
+                                        <c:when test="${user!=null}">
                                     <li><a href="${pageContext.request.contextPath}/log"><i class="ti-user"></i>Log out</a>
                                     </li>
+                                        </c:when>
+                                        <c:otherwise>
+                                    <li><a href="${pageContext.request.contextPath}/login.jsp"><i class="ti-user"></i>Log in</a>
+                                    </li>
+                                        </c:otherwise>
+                                    </c:choose>
                                 </ul>
                             </div>
                         </div>

@@ -23,7 +23,8 @@ public class LogServlet extends HttpServlet {
             session.setAttribute("user",new User());
             response.sendRedirect(request.getContextPath() + "/");
         }else{
-            response.sendRedirect(request.getContextPath() + "/login.jsp");
+            request.setAttribute("message", "error");
+            request.getRequestDispatcher( "login.jsp").forward(request,response);
         }
     }
 
