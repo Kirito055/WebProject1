@@ -19,6 +19,7 @@
 
 
     <!-- CSS here -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/club.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/search.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/profile.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
