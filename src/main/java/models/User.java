@@ -1,82 +1,130 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.sql.Date;
+
 public class User {
-    long id;
-    String email,first_name,last_name,password;
-    String birth_date;
-    int grade,group_id;
-    String avatar, role;
+    private long id;
+    private String email;
+    private String firstName;
+    private String lastName;
+    private String password;
+    private Date birthDate;
+    private int grade;
+    private long group_id;
+    private String avatar;
+    private String role;
 
+    public User(){
 
+    }
 
-    public User(String[] userFields) {
-        if (userFields.length == 10) {
-            this.id = Integer.parseInt(userFields[0]);
-            this.email = userFields[1];
-            this.first_name = userFields[2];
-            this.last_name = userFields[3];
-            this.password = userFields[4];
-            this.birth_date=userFields[5];
-            this.grade= Integer.parseInt(userFields[6]);
-            this.group_id= Integer.parseInt(userFields[7]);
-            this.avatar=userFields[8];
-            this.role=userFields[9];
-        }
+    public User(long id, String email, String firstName, String lastName, String password, Date birthDate, int grade, long group_id, String avatar, String role) {
+        this.id = id;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.birthDate = birthDate;
+        this.grade = grade;
+        this.group_id = group_id;
+        this.avatar = avatar;
+        this.role = role;
+    }
+
+    public User(long id, String email, String firstName, String lastName, Date birthDate, int grade, long group_id, String avatar, String role) {
+        this.id = id;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.grade = grade;
+        this.group_id = group_id;
+        this.avatar = avatar;
+        this.role = role;
     }
 
     public long getId() {
         return id;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String getEmail() {
         return email;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public String getBirth_date() {
-        return birth_date;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
     public int getGrade() {
         return grade;
     }
 
-    public int getGroup_id() {
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+
+    public long getGroup_id() {
         return group_id;
+    }
+
+    public void setGroup_id(long group_id) {
+        this.group_id = group_id;
     }
 
     public String getAvatar() {
         return avatar;
     }
 
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
     public String getRole() {
         return role;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                ", password='" + password + '\'' +
-                ", birth_date='" + birth_date + '\'' +
-                ", grade=" + grade +
-                ", group_id=" + group_id +
-                ", avatar='" + avatar + '\'' +
-                ", role='" + role + '\'' +
-                '}';
+    public void setRole(String role) {
+        this.role = role;
     }
+
+
 }

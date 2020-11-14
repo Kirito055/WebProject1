@@ -1,9 +1,11 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Club {
     private long id;
     private String name;
-    private long leaderId;
+    private @JsonProperty("leaderId") long leaderId;
     private String logo;
     private String description;
 

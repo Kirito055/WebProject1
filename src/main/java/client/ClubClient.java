@@ -28,9 +28,36 @@ public class ClubClient {
             WebTarget target = getWebTarget();
             String clubsString = target.request().accept(MediaType.APPLICATION_JSON).get(String.class);
             ObjectMapper mapper = new ObjectMapper();
-            List<Club> clubs = mapper.readValue(clubsString, new TypeReference<List<Club>>(){});
+            List<Club> clubs = mapper.readValue(clubsString, new TypeReference<List<Club>>(){} );
             return clubs;
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    public static List<Club> getClubsByUserId(long id) {
+        try {
+            WebTarget target = getWebTarget();
+            String clubsString = target.path("user/" + id).request().accept(MediaType.APPLICATION_JSON).get(String.class);
+            ObjectMapper mapper = new ObjectMapper();
+            List<Club> clubs = mapper.readValue(clubsString, new TypeReference<List<Club>>(){} );
+            return clubs;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    public static Club get(long id){
+        try {
+            WebTarget target = getWebTarget();
+            Club club = target.path(String.valueOf(id)).request().accept(MediaType.APPLICATION_JSON).get(Club.class);
+            return club;
         } catch (Exception e) {
             e.printStackTrace();
         }

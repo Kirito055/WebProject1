@@ -9,6 +9,9 @@ public class Post {
     private int user_id;
     private int club_id;
     private String type;
+
+
+
     public Post(Integer id, String title, String descrition, String date, String image, int user_id, int club_id, String type) {
         this.id=id;
         this.title = title;
@@ -19,6 +22,9 @@ public class Post {
         this.club_id = club_id;
         this.type = type;
     }
+
+
+
     public Post(String title, String descrition, String date, String image, int user_id, int club_id, String type) {
         this.title = title;
         this.descrition = descrition;
@@ -54,6 +60,8 @@ public class Post {
         }
 
     }
+
+
     public int getId() {
         return id;
     }
