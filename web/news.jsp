@@ -2,12 +2,12 @@
 <main>
     <!--? Hero Start -->
     <div class="slider-area ">
-        <div class="slider-height2 d-flex align-items-center">
+        <div class="slider-height2 d-flex align-items-center" >
             <div class="container">
-                <div class="row">
+                <div class="row"  >
                     <div class="col-xl-12">
-                        <div class="hero-cap hero-cap2 text-center">
-                            <h2>Blog</h2>
+                        <div class="hero-cap hero-cap2 text-center" >
+                            <h2>News</h2>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                                     <li><a href="#"><i class="fa fa-user"></i> Author name (Username) </a></li>
 
                                     <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
-                                    <li><a href="news_form/update_news.jsp"> Update news  </a></li>
+                                    <li><a href="post_form/update_post.jsp"> Update news  </a></li>
 
                                 </ul>
                             </div>
@@ -50,7 +50,7 @@
                         <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
                         <article>
                             <a class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                               type="button" href="news_form/add_news.jsp">
+                               type="button" href="post_form/add_post.jsp">
                                 Add news
                             </a>
                         </article>
