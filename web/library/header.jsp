@@ -10,7 +10,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fn" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<html><meta name="description" content="">
+<html>
+<meta name="description" content="">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="${pageContext.request.contextPath}site.webmanifest">
@@ -18,6 +19,7 @@
 
 
     <!-- CSS here -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/search.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/profile.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.carousel.min.css">
@@ -47,7 +49,7 @@
     </div>
 </div>
 -->
-
+<c:set var="user" value="${sessionScope.user}"/>
 <!-- Preloader Start -->
 <header>
     <!-- Header Start -->
@@ -60,7 +62,7 @@
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                     </ul>
                 </div>
                 <div class="container">
@@ -74,7 +76,16 @@
                             </div>
                             <div class="header-info-right">
                                 <ul>
-                                    <li><a href="${pageContext.request.contextPath}/log"><i class="ti-user"></i>Log out</a></li>
+                                    <c:choose>
+                                        <c:when test="${user!=null}">
+                                    <li><a href="${pageContext.request.contextPath}/log"><i class="ti-user"></i>Log out</a>
+                                    </li>
+                                        </c:when>
+                                        <c:otherwise>
+                                    <li><a href="${pageContext.request.contextPath}/login.jsp"><i class="ti-user"></i>Log in</a>
+                                    </li>
+                                        </c:otherwise>
+                                    </c:choose>
                                 </ul>
                             </div>
                         </div>
@@ -91,7 +102,9 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo logo2 d-block d-lg-none">
-                            <a href="${pageContext.request.contextPath}index.jsp"><img src="${pageContext.request.contextPath}/assets/img/logo/astanait.png" height="32" alt=""></a>
+                            <a href="${pageContext.request.contextPath}index.jsp"><img
+                                    src="${pageContext.request.contextPath}/assets/img/logo/astanait.png" height="32"
+                                    alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
@@ -101,19 +114,17 @@
                                     <li><a href="${pageContext.request.contextPath}/news.jsp">News</a></li>
                                     <li><a href="${pageContext.request.contextPath}/event.jsp">Events</a></li>
                                     <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/user">Profile</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/profile.jsp">Profile</a></li>
+                                    <li>
+                                        <a href="${pageContext.request.contextPath}/search.jsp" class="search-icon"
+                                           aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-search special-tag"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
-                        <!-- Header-btn -->
-                        <div class="header-search d-none d-lg-block">
-                            <form action="#" class="form-box f-right ">
-                                <input type="text" name="Search" placeholder="Search">
-                                <div class="search-icon">
-                                    <i class="fas fa-search special-tag"></i>
-                                </div>
-                            </form>
-                        </div>
+
                     </div>
                     <!-- Mobile Menu -->
                     <div class="col-12">

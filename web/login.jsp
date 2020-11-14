@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: User
@@ -73,9 +74,16 @@
             <div class="col-lg-5 col-md-8 align-item-center">
                 <div class="border">
                     <h3 class="bg-gray p-4">Log in</h3>
+
                     <form action="${pageContext.request.contextPath}/log" method="post">
                         <fieldset class="p-4">
-                            <input type="text" name="username" placeholder="Username" class="border p-3 w-100 my-2">
+                            <c:set var="message" value="${requestScope['message']}"/>
+                            <c:if test='${message=="error"}'>
+                            <div class="alert alert-danger" role="alert" data-aria-autofocus="true">
+                                Incorrect email or password.
+                            </div>
+                            </c:if>
+                            <input type="text" name="email" placeholder="Email" class="border p-3 w-100 my-2">
                             <input type="password" name="password" placeholder="Password" class="border p-3 w-100 my-2">
 
                             <button type="submit" class="d-block py-3 px-5 bg-primary text-white border-0 rounded font-weight-bold mt-3">Log in</button>
