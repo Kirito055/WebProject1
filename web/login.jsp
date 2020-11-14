@@ -73,8 +73,12 @@
             <div class="col-lg-5 col-md-8 align-item-center">
                 <div class="border">
                     <h3 class="bg-gray p-4">Log in</h3>
+
                     <form action="${pageContext.request.contextPath}/log" method="post">
                         <fieldset class="p-4">
+                            <div class="alert alert-danger" role="alert" data-aria-autofocus="true">
+                                Текст Для Даулета
+                            </div>
                             <input type="text" name="username" placeholder="Username" class="border p-3 w-100 my-2">
                             <input type="password" name="password" placeholder="Password" class="border p-3 w-100 my-2">
 
