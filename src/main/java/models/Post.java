@@ -1,72 +1,39 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.sql.Date;
+
 public class Post {
-    private int id;
+    private long id;
     private String title;
-    private String descrition;
-    private String date;
+    private String description;
+    private Date date;
     private String image;
-    private int user_id;
-    private int club_id;
+    private long userId;
+    private long clubId;
     private String type;
 
+    public Post(){
 
+    }
 
-    public Post(Integer id, String title, String descrition, String date, String image, int user_id, int club_id, String type) {
-        this.id=id;
+    public Post(long id, String title, String description, Date date, String image, long userId, long clubId, String type) {
+        this.id = id;
         this.title = title;
-        this.descrition = descrition;
+        this.description = description;
         this.date = date;
         this.image = image;
-        this.user_id = user_id;
-        this.club_id = club_id;
+        this.userId = userId;
+        this.clubId = clubId;
         this.type = type;
     }
 
-
-
-    public Post(String title, String descrition, String date, String image, int user_id, int club_id, String type) {
-        this.title = title;
-        this.descrition = descrition;
-        this.date = date;
-        this.image = image;
-        this.user_id = user_id;
-        this.club_id = club_id;
-        this.type = type;
-    }
-
-    public Post(String[] postfields)
-    {
-        if(postfields.length == 7)
-        {
-            this.id = Integer.parseInt(postfields[0]);
-            this.title = postfields[1];
-            this.descrition=postfields[2];
-            this.date=postfields[3];
-            this.image=postfields[4];
-            this.user_id= Integer.parseInt(postfields[5]);
-            this.type=postfields[6];
-        }
-        if(postfields.length == 8)
-        {
-            this.id = Integer.parseInt(postfields[0]);
-            this.title = postfields[1];
-            this.descrition=postfields[2];
-            this.date=postfields[3];
-            this.image=postfields[4];
-            this.user_id= Integer.parseInt(postfields[5]);
-            this.club_id= Integer.parseInt(postfields[6]);
-            this.type=postfields[7];
-        }
-
-    }
-
-
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -78,19 +45,20 @@ public class Post {
         this.title = title;
     }
 
-    public String getDescrition() {
-        return descrition;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescrition(String descrition) {
-        this.descrition = descrition;
+    public void setDescription(String description) {
+        this.description = description;
     }
-
-    public String getDate() {
+    @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -102,20 +70,20 @@ public class Post {
         this.image = image;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
-    public int getClub_id() {
-        return club_id;
+    public long getClubId() {
+        return clubId;
     }
 
-    public void setClub_id(int club_id) {
-        this.club_id = club_id;
+    public void setClubId(long clubId) {
+        this.clubId = clubId;
     }
 
     public String getType() {
