@@ -75,7 +75,7 @@
                     <h3 class="bg-gray p-4">Log in</h3>
                     <form action="${pageContext.request.contextPath}/log" method="post">
                         <fieldset class="p-4">
-                            <input type="text" name="username" placeholder="Username" class="border p-3 w-100 my-2">
+                            <input type="text" name="email" placeholder="Email" class="border p-3 w-100 my-2">
                             <input type="password" name="password" placeholder="Password" class="border p-3 w-100 my-2">
 
                             <button type="submit" class="d-block py-3 px-5 bg-primary text-white border-0 rounded font-weight-bold mt-3">Log in</button>

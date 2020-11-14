@@ -1,10 +1,8 @@
 package servlets;
 
 
+import client.UserClient;
 import models.User;
-
-
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,14 +17,13 @@ public class LogServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        User user = null;
-        /*User user = UserSql.login(email,password);*/
+        User user = UserClient.login(email,password);
         if(user!=null){
             HttpSession session = request.getSession(true);
-            session.setAttribute("user",user);
+            session.setAttribute("user",new User());
             response.sendRedirect(request.getContextPath() + "/");
         }else{
-            response.sendRedirect(request.getContextPath() + "/");
+            response.sendRedirect(request.getContextPath() + "/login.jsp");
         }
     }
 

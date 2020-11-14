@@ -7,8 +7,10 @@ import org.glassfish.jersey.client.ClientConfig;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 public class UserClient {
@@ -59,6 +61,17 @@ public class UserClient {
         return null;
     }
 
+    public static User login(String email, String password){
+        try {
+            WebTarget target = getWebTarget();
+            Response response = target.path("login").request().post(Entity.entity(new User(email,password),MediaType.APPLICATION_JSON), Response.class);
+            User user = response.readEntity(User.class);
+            return user;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 
     public static List<User> getAll() {
