@@ -1,4 +1,4 @@
-<%@include file="header.jsp"%> <%--There we include header--%>
+<%@include file="library/header.jsp"%> <%--There we include header--%>
 <main>
     <!--? Hero Start -->
     <div class="slider-area ">
@@ -171,4 +171,4 @@
     </section>
     <!--================Blog Area =================-->
 </main>
-<%@include file="footer.jsp"%> <%--There we include footer--%>
+<%@include file="library/footer.jsp"%> <%--There we include footer--%>

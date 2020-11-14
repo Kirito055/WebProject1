@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@include file="header.jsp"%> <%--There we include header--%><!--
+<%@include file="library/header.jsp"%> <%--There we include header--%><!--
 <section class="all-course section-padding30">
     <div class="container">
         <div class="row">
@@ -46,4 +46,4 @@
         </form>
     </c:forEach>
 </div>
-<%@include file="footer.jsp"%> <%--There we include footer--%>
+<%@include file="library/footer.jsp"%> <%--There we include footer--%>

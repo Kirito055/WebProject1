@@ -1,4 +1,4 @@
-<%@include file="header.jsp"%> <%--There we include header--%>
+<%@include file="library/header.jsp"%> <%--There we include header--%>
 <main>
     <!--? slider Area Start-->
     <div class="slider-area ">
@@ -72,7 +72,7 @@
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="assets/img/commisia.jpg">
+                        <img src="assets/img/commisia.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -441,4 +441,4 @@
     </div>
     <!-- Blog Area End -->
 </main>
-<%@include file="footer.jsp"%> <%--There we include footer--%>
+<%@include file="library/footer.jsp"%> <%--There we include footer--%>
