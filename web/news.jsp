@@ -61,8 +61,8 @@
                                                 </li>
 
                                                 <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
-                                                <li><a href="post_form/update_post.jsp"> Update event </a></li>
-
+                                                <li><a href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>"> Update news </a></li>
+                                                <li><a href="${pageContext.request.contextPath}/news?action=delete&id=<c:out value="${news.id}"/>"></a></li>
                                             </ul>
                                         </div>
                                     </article>

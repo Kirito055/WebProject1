@@ -54,8 +54,8 @@
                                                 </li>
 
                                                 <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
-                                                <li><a href="post_form/update_post.jsp"> Update event </a></li>
-
+                                                <li><a href="${pageContext.request.contextPath}/events?action=edit&id=<c:out value="${event.id}"/>"> Update event </a></li>
+                                                <li><a href="${pageContext.request.contextPath}/events?action=delete&id=<c:out value="${event.id}"/>">Remove</a></li>
                                             </ul>
                                         </div>
                                     </article>

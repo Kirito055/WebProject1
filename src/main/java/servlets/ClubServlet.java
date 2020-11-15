@@ -36,6 +36,12 @@ public class ClubServlet extends HttpServlet {
                 request.setAttribute("clubs", club);
                 request.getRequestDispatcher("update_club.jsp").forward(request, response);
             }
+            else if(button.equals("delete")){
+                String id=request.getParameter("id");
+                ClubClient.delete(id);
+                request.setAttribute("clubs",ClubClient.getAll());
+                request.getRequestDispatcher("club.jsp").forward(request, response);
+            }
         }
 //        else {
 //            if(button.equals("edit")){
