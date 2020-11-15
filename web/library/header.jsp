@@ -19,7 +19,7 @@
 
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/search.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/search2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/profile.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.carousel.min.css">

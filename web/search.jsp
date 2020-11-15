@@ -47,12 +47,12 @@
         <button>Search</button>
 
     </form>
-    <div class="search-result"
+    <div class="search-result">
 
     <c:forEach items="${users}" var="user">
         <!--добавить сюда форич для вывода резулььтата-->
 
-            <a class="res-card" href="/user?action=about&id=${user.id}">
+            <a class="res-card" href="${pageContext.request.contextPath}/user?action=about&id=${user.id}">
                 <div class="image" style="background-image: url(${user.avatar});">
                 </div>
                 <div class="text">
@@ -60,10 +60,8 @@
                     <p>${user.group_id}/${user.grade}</p>
                 </div>
             </a>
-
     </c:forEach>
-</div>
-    <h1>${message}</h1>
+    </div>
 </div>
 <script>
     function onInput() {
