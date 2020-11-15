@@ -13,20 +13,7 @@ public class ClubServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        /*
-        switch (button) {
-            case "add":
-            {
-                String clubName = request.getParameter("clubName");
-                int leader_id = Integer.parseInt(request.getParameter("leader_id"));
-                String logo = request.getParameter("logo");
-                String description = request.getParameter("description");
 
-                int added = db.addClub(clubName,leader_id,logo,description);
-                request.setAttribute("crud", "c"+added);
-                break;
-            }
-         */
     }
 
     @Override

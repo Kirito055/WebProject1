@@ -50,5 +50,11 @@
 
     </div>
 </c:if>
+<article>
+    <a class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+       type="button" href="${pageContext.request.contextPath}/add_club.jsp">
+        Add Club
+    </a>
+</article>
 
 <%@include file="library/footer.jsp" %> <%--There we include footer--%>
