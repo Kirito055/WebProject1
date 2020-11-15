@@ -11,7 +11,7 @@ public class Post {
     private String title;
     private String description;
 
-    private @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MMM-yyyy")
+    private @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     Date date;
 
     private String image;
@@ -70,7 +70,7 @@ public class Post {
         this.description = description;
     }
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MMM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     public Date getDate() {
         return date;
     }

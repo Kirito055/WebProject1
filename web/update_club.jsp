@@ -1,30 +1,29 @@
 <%@include file="library/header.jsp"%>
 <script>
-
-    $(document).ready(function(){
-        $('#upd').click(function(){
+    $( document ).ready(function() {
+        $('#upd').click(function () {
+            var club = {};
+            club.id = $('#id').val();
+            club.name = $('#name').val();
+            club.leaderId = $('#leader_id').val();
+            club.logo = $('#logo').val();
+            club.description = $('#desc').val();
+            var clubJSON = JSON.stringify(club);
             $.ajax({
-                url: 'http://localhost:8080/rest/clubs',
-                type: 'put',
-                contentType:'application/json;charset=utf-8',
-                data: JSON.stringify(
-                    {
-                        id: $('#id').val(),
-                        name: $('#name').val(),
-                        leaderId: $('#leader_id').val(),
-                        logo: $('#logo').val(),
-                        description: $('#desc').val()
-                    }
-                ),
-                success: function (data, textStatus) {
-                    alert("Updated Successfully");
+                url: 'http://localhost:8080/rest/clubs/',
+                method: "put",
+                contentType: "application/json",
+                data: clubJSON,
+                success: function (result) {
+                    alert(result)
                 },
-                error: function (jqXhr, textStatus, errorThrown){
-                    alert(textStatus);
+                error: function (error) {
+                    alert("Something went wrong try again later")
                 }
-            });
-        });
+            })
+        })
     });
+
 
 
 
