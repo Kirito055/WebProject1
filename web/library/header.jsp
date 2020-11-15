@@ -19,6 +19,7 @@
 
 
     <!-- CSS here -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/club.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/search.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/profile.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
@@ -103,8 +104,8 @@
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="${pageContext.request.contextPath}/main.jsp">Home</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/news.jsp">News</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/event.jsp">Events</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/news">News</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/events">Events</a></li>
                                     <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
                                     <li><a href="${pageContext.request.contextPath}/profile.jsp">Profile</a></li>
                                     <li>
