@@ -1,5 +1,6 @@
 <%@include file="library/header.jsp" %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <div class="search">
     <form action="search" method="get" class="d-flex justify-content-around">
         <%--<input type="text" name="name" placeholder="Search by name">--%>
@@ -46,16 +47,22 @@
         <button>Search</button>
 
     </form>
-    <c:forEach items="${users}" var="user">
-        <div class="search-result">
+    <div class="search-result"
 
-            <!--добавить сюда форич для вывода резулььтата-->
-            <div class="res-card  ">
-                <h4>${user.firstName}${" "}${user.lastName}</h4>
-                <p>${user.group_id}/${user.grade}</p>
-            </div>
-        </div>
+    <c:forEach items="${users}" var="user">
+        <!--добавить сюда форич для вывода резулььтата-->
+
+            <a class="res-card" href="/user?action=about&id=${user.id}">
+                <div class="image" style="background-image: url(${user.avatar});">
+                </div>
+                <div class="text">
+                    <h4>${user.firstName}${" "}${user.lastName}</h4>
+                    <p>${user.group_id}/${user.grade}</p>
+                </div>
+            </a>
+
     </c:forEach>
+</div>
     <h1>${message}</h1>
 </div>
 <script>
