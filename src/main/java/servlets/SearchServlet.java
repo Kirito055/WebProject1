@@ -24,7 +24,7 @@ public class SearchServlet extends HttpServlet {
         String facultyString = request.getParameter("faculty");
         int grade = Integer.parseInt(request.getParameter("grade"));
         GroupCriteria groupCriteria = new GroupCriteria();
-        if(groupNameString!=null){
+        if(!groupNameString.equals("")){
             if(!facultyString.equals("none")){
                 Group group = GroupClient.getByName(groupNameString);
                 List<Group> groupsByFaculty = GroupClient.getAllByFaculty(facultyString);
