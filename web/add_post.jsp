@@ -1,5 +1,4 @@
-
-<%@include file="../library/header.jsp"%>
+<%@include file="library/header.jsp"%>
 
 <script>
 
@@ -69,4 +68,4 @@
 </section>
 
 
-<%@include file="../library/footer.jsp"%>
+<%@include file="library/footer.jsp"%>

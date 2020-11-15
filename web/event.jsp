@@ -75,7 +75,7 @@
                         <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
                         <article>
                             <a class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                               type="button" href="post_form/add_post.jsp">
+                               type="button" href="add_post.jsp">
                                 Add event
                             </a>
                         </article>

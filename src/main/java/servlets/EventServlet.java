@@ -1,6 +1,7 @@
 package servlets;
 
 import client.PostClient;
+import models.Post;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,39 +13,35 @@ public class EventServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String submit = req.getParameter("submit");
-        switch (submit) {
-            case "add": {
-                String title = req.getParameter("title");
-                String description = req.getParameter("userId");
-                String date = req.getParameter("date");
-                String image = req.getParameter("image");
-                int user_id = Integer.parseInt(req.getParameter("user_id"));
-                int club_id = Integer.parseInt(req.getParameter("club_id"));
-
-               // postControl.addEvent(new Post(title, description, date, image, user_id, club_id, "event"));
-
-                break;
-            }
-            case "delete": {
-                String id = req.getParameter("id");
-                PostClient.delete(id);
-                break;
-            }
-            default: {
-                req.setAttribute("events", "s");
-                break;
-            }
-        }
-        doGet(req, resp);
     }
 
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-      request.setAttribute("eventsALL", PostClient.getAll());
+        String button = request.getParameter("action");
+        System.out.println(button);
 
-        request.getRequestDispatcher("event.jsp").forward(request, response);
+        if(button==null){
+            request.setAttribute("eventsALL", PostClient.getAll());
+            request.getRequestDispatcher("event.jsp").forward(request, response);
+        }
+        else {
+            if(button.equals("edit")){
+
+                long id = Long.parseLong(request.getParameter("id"));
+                Post post = PostClient.get(id);
+                System.out.println(post);
+                request.setAttribute("eventsALL", post);
+                request.getRequestDispatcher("update_post.jsp").forward(request, response);
+            }
+            else if(button.equals("delete")){
+                String id = request.getParameter("id");
+                PostClient.delete(id);
+                request.setAttribute("eventsALL", PostClient.getAll());
+                request.getRequestDispatcher("event.jsp").forward(request, response);
+            }
+
+        }
     }
 }

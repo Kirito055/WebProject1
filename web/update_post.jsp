@@ -1,5 +1,5 @@
 
-<%@include file="../library/header.jsp"%>
+<%@include file="library/header.jsp"%>
 
 <section class="login py-5 border-top-1">
     <div class="container">
@@ -40,4 +40,4 @@
     </div>
 </section>
 
-<%@include file="../library/footer.jsp"%>
+<%@include file="library/footer.jsp"%>
