@@ -58,6 +58,7 @@ public class ClubClient {
     }
 
 
+
     public static Club get(long id){
         try {
             WebTarget target = getWebTarget();

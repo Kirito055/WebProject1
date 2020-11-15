@@ -32,7 +32,7 @@ public class EventServlet extends HttpServlet {
                 long id = Long.parseLong(request.getParameter("id"));
                 Post post = PostClient.get(id);
                 System.out.println(post);
-                request.setAttribute("eventsALL", post);
+                request.setAttribute("post", post);
                 request.getRequestDispatcher("update_post.jsp").forward(request, response);
             }
             else if(button.equals("delete")){

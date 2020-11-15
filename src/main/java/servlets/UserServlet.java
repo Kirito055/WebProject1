@@ -26,7 +26,7 @@ public class UserServlet extends HttpServlet {
                 User user = UserClient.get(id);
                 Group group = GroupClient.getGroupByUserId(id);
                 List<Club> clubs = ClubClient.getClubsByUserId(id);
-                req.setAttribute("userOne",user);
+                req.setAttribute("user",user);
                 req.setAttribute("group",group);
                 req.setAttribute("clubs",clubs);
                 req.getRequestDispatcher("profile.jsp").forward(req,resp);

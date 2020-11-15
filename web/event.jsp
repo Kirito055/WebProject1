@@ -34,7 +34,7 @@
                                             </a>
                                         </div>
                                         <div class="blog_details">
-                                            <a class="d-inline-block" href="blog_details.html">
+                                            <a class="d-inline-block" href="">
                                                 <!--News Title-->
                                                 <h2 class="blog-head" style="color: #2d2d2d;">
                                                     <c:out value="${event.title}"/>
@@ -73,12 +73,14 @@
 
 
                         <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
+                        <c:if test="${user.role=='admin'}">
                         <article>
                             <a class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
                                type="button" href="add_post.jsp">
                                 Add event
                             </a>
                         </article>
+                        </c:if>
 
                         <!--кнопки для перехода на другие страницы-->
                         <nav class="blog-pagination justify-content-center d-flex">

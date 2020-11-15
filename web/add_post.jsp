@@ -7,7 +7,6 @@
             var post = {};
             post.title = $('#title').val();
             post.description = $('#desc').val();
-            post.date = $('#date').val();
             post.image = $('#imglink').val();
             post.userId=$('#user_id').val();
             post.type=$('#type').val();
@@ -39,7 +38,6 @@
 
                             <input id="title" type="text" name="name" placeholder="news name" class="border p-3 w-100 my-2">
                             <input id="desc" type="text" name="desc" placeholder="news desc" class="border p-3 w-100 my-2">
-                            <input id="date" type="date" name="date" placeholder="news date" class="border p-3 w-100 my-2">
                             <input id="imglink" type="text" name="image" placeholder="image link" class="border p-3 w-100 my-2">
 
                             <input id="user_id" type="text" value="<c:out value="${user.id}"/>" >

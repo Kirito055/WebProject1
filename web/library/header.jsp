@@ -54,6 +54,9 @@
 </div>
 -->
 <c:set var="user" value="${sessionScope.user}"/>
+<c:if test="${user==null}">
+    <c:redirect url="/login.jsp"/>
+</c:if>
 <!-- Preloader Start -->
 <header>
     <!-- Header Start -->
@@ -118,7 +121,7 @@
                                     <li><a href="${pageContext.request.contextPath}/news">News</a></li>
                                     <li><a href="${pageContext.request.contextPath}/events">Events</a></li>
                                     <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/profile.jsp">Profile</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/user?action=about&id=${user.id}">Profile</a></li>
                                     <li>
                                         <a href="${pageContext.request.contextPath}/search.jsp" class="search-icon"
                                            aria-haspopup="true" aria-expanded="false">
