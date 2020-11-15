@@ -35,7 +35,7 @@
                     <c:if test="${user.role=='admin'}">
                     <div class="d-flex justify-content-around">
 
-                        <a id="remove"  href=""  class="btn btn-outline-danger">
+                        <a id="remove"  href="${pageContext.request.contextPath}/clubs?action=delete&id=${club.id}"  class="btn btn-outline-danger">
                             remove
                         </a>
                         <a id="update"  href="${pageContext.request.contextPath}/clubs?action=edit&id=<c:out value="${club.id}"/>" class="btn btn-outline-success">

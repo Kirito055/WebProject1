@@ -78,4 +78,10 @@ public class PostClient {
     }
 
 
+    public static void delete(String id){
+        WebTarget target = getWebTarget();
+        target.path(id).request().delete();
+    }
+
+
 }
