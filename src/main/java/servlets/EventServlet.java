@@ -4,6 +4,7 @@ import client.PostClient;
 import models.Post;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +22,12 @@ public class EventServlet extends HttpServlet {
 
         String button = request.getParameter("action");
         System.out.println(button);
-
+        Cookie[] cookies = request.getCookies();
+        for(Cookie cookie : cookies){
+            if(cookie.getName().equals("firstName")){
+                request.setAttribute("firstName", cookie.getValue());
+            }
+        }
         if(button==null){
             request.setAttribute("eventsALL", PostClient.getAll());
             request.getRequestDispatcher("event.jsp").forward(request, response);

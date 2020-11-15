@@ -35,7 +35,7 @@
                     <h3 class="bg-gray p-4">Update Post</h3>
 
                     <input id="id" type="hidden" value="<c:out value="${post.id}"/>" placeholder="news name" class="border p-3 w-100 my-2">
-                    <input id="title" type="text" value="<c:out value="${post.title}"/>"  class="border p-3 w-100 my-2">>
+                    <input id="title" type="text" value="<c:out value="${post.title}"/>"  class="border p-3 w-100 my-2">
                     <input id="desc" type="text" value="<c:out value="${post.description}"/>" placeholder="news desc" class="border p-3 w-100 my-2">
                     <input id="image" type="text" value="${post.image}" placeholder="image link" class="border p-3 w-100 my-2">
 
@@ -44,15 +44,11 @@
 
                     <select id="type" name="type" class="border p-3 w-100 my-2">
                         <option value="news">news</option>
-                        <option value="post">post</option>
                         <option value="event">event</option>
                     </select>
 
                     <!--прописать сюда jstl c:if если user_id==leader_id -->
-                    <div class="loggedin-forgot d-inline-flex my-3">
-                        <input type="checkbox" id="club" name="club" class="mt-1">
-                        <label for="club" class="px-2"> on club name</label>
-                    </div>
+
 
                     <button id="upd" type="button"
                             class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">

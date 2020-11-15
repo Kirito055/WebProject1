@@ -10,7 +10,9 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 public class PostClient {
 
@@ -35,12 +37,12 @@ public class PostClient {
     }
 
 
-    public static List<Post> getPostsByUserId(long id){
+    public static LinkedList<Post> getPostsByUserId(long id){
         try {
             WebTarget target = getWebTarget();
             String usersString = target.path("user/" + id).request().accept(MediaType.APPLICATION_JSON).get(String.class);
             ObjectMapper mapper = new ObjectMapper();
-            List<Post> posts = mapper.readValue(usersString, new TypeReference<List<Post>>(){} );
+            LinkedList<Post> posts = mapper.readValue(usersString, new TypeReference<LinkedList<Post>>(){} );
             return posts;
         } catch (Exception e) {
             e.printStackTrace();
@@ -48,12 +50,12 @@ public class PostClient {
         return null;
     }
 
-    public static List<Post> getPostsByClubId(long id){
+    public static Stack<Post> getPostsByClubId(long id){
         try {
             WebTarget target = getWebTarget();
             String usersString = target.path("club/" + id).request().accept(MediaType.APPLICATION_JSON).get(String.class);
             ObjectMapper mapper = new ObjectMapper();
-            List<Post> posts = mapper.readValue(usersString, new TypeReference<List<Post>>(){} );
+            Stack<Post> posts = mapper.readValue(usersString, new TypeReference<Stack<Post>>(){} );
             return posts;
         } catch (Exception e) {
             e.printStackTrace();
@@ -63,12 +65,12 @@ public class PostClient {
 
 
 
-    public static List<Post> getAll() {
+    public static Stack<Post> getAll() {
         try {
             WebTarget target = getWebTarget();
             String usersString = target.request().accept(MediaType.APPLICATION_JSON).get(String.class);
             ObjectMapper mapper = new ObjectMapper();
-            List<Post> posts = mapper.readValue(usersString, new TypeReference<List<Post>>(){} );
+            Stack<Post> posts = mapper.readValue(usersString, new TypeReference<Stack<Post>>(){} );
             return posts;
 
         } catch (Exception e) {

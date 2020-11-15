@@ -20,7 +20,7 @@
 
     <!-- CSS here -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/search2.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/profile.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/profile2.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slicknav.css">
@@ -85,6 +85,9 @@
                                 <ul>
                                     <c:choose>
                                         <c:when test="${user!=null}">
+                                            <c:set var="firstName" value="${requestScope.firstName}"/>
+                                            <li><i class="">${firstName}</i>
+                                            </li>
                                             <li><a href="${pageContext.request.contextPath}/log"><i class="ti-user"></i>Log out</a>
                                             </li>
                                         </c:when>

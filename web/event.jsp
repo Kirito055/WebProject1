@@ -52,18 +52,30 @@
 
                                                     </a>
                                                 </li>
-
-                                                <c:if test="${user.role=='admin'}">
+                                                <c:choose>
+                                                <c:when test="${user.role=='admin'}">
                                                     <div class="d-flex justify-content-around">
 
-                                                        <a id="remove"  href="${pageContext.request.contextPath}/events?action=delete&id=${event.id}"  class="btn btn-outline-danger">
+                                                        <a id="remove"  href="${pageContext.request.contextPath}/events?action=delete&id=${event.id}" style="color: white"  class="btn btn-outline-danger">
                                                             remove
                                                         </a>
-                                                        <a id="update"  href="${pageContext.request.contextPath}/events?action=edit&id=<c:out value="${event.id}"/>" class="btn btn-outline-success">
+                                                        <a id="update"  href="${pageContext.request.contextPath}/events?action=edit&id=<c:out value="${event.id}"/>" style="color: white" class="btn btn-outline-success">
                                                             update
                                                         </a>
                                                     </div>
-                                                </c:if>
+                                                </c:when>
+                                                <c:when test="${user.id == event.author.id}">
+                                                    <div class="d-flex justify-content-around">
+
+                                                        <a  href="${pageContext.request.contextPath}/events?action=delete&id=${event.id}" style="color: white" class="btn btn-outline-danger ">
+                                                            remove
+                                                        </a>
+                                                        <a  href="${pageContext.request.contextPath}/events?action=edit&id=<c:out value="${event.id}"/>" style="color: white" class="btn btn-outline-success">
+                                                            update
+                                                        </a>
+                                                    </div>
+                                                </c:when>
+                                                </c:choose>
                                             </ul>
                                         </div>
                                     </article>

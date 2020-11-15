@@ -61,7 +61,8 @@
                                                 </li>
 
                                                 <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
-                                                <c:if test="${user.role=='admin'}">
+                                                <c:choose>
+                                                <c:when test="${user.role=='admin'}">
                                                     <div class="d-flex justify-content-around">
 
                                                         <a id="remove"  href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}"  class="btn btn-outline-danger">
@@ -71,7 +72,19 @@
                                                             update
                                                         </a>
                                                     </div>
-                                                </c:if>
+                                                </c:when>
+                                                <c:when test="${user.id == news.author.id}">
+                                                    <div class="d-flex justify-content-around">
+
+                                                        <a  href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}"  class="btn btn-outline-danger">
+                                                            remove
+                                                        </a>
+                                                        <a   href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>" class="btn btn-outline-success">
+                                                            update
+                                                        </a>
+                                                    </div>
+                                                </c:when>
+                                                </c:choose>
                                             </ul>
                                         </div>
                                     </article>

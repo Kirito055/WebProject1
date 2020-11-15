@@ -21,13 +21,15 @@
 
     <div class="box">
         <h4>In club:</h4>
-        <c:if test="${clubs.size()==0}">
-            <p class="text-center">Not entered in any club</p>
-        </c:if>
         <c:if test="${clubs.size()>0}">
-        <c:forEach items="${clubs}" var="club">
-            <p class="text-center">${club.name}</p>
-        </c:forEach>
+            <div class="res-box">
+                <c:forEach items="${clubs}" var="club">
+                    <div class="row-box">
+                        <img src="${club.logo}" alt="">
+                        <h5>${club.name}</h5>
+                    </div>
+                </c:forEach>
+            </div>
         </c:if>
     </div>
 
