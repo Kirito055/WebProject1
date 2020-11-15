@@ -12,12 +12,12 @@
             post.image = $('#imglink').val();
             post.userId=$('#user_id').val();
             post.type=$('#type').val();
-            var clubJSON = JSON.stringify(club);
+            var postJSON = JSON.stringify(post);
             $.ajax({
                 url: 'http://localhost:8080/rest/posts/',
                 method: "POST",
                 contentType: "application/json",
-                data: clubJSON,
+                data: postJSON,
                 success: function (result) {
                     alert(result)
                 },
@@ -37,8 +37,7 @@
                 <div class="border border">
                     <c:set var="user" value="${sessionScope.user}" />
                     <h3 class="bg-gray p-4">Add Post</h3>
-                    <form action="${pageContext.request.contextPath}/NewsServlet?action=add&user=id" method="post">
-                        <fieldset class="p-4">
+
                             <input id="title" type="text" name="name" placeholder="news name" class="border p-3 w-100 my-2">
                             <input id="desc" type="text" name="desc" placeholder="news desc" class="border p-3 w-100 my-2">
                             <input id="date" type="date" name="date" placeholder="news date" class="border p-3 w-100 my-2">
@@ -57,12 +56,11 @@
                                 <label for="club" class="px-2"> on club name</label>
                             </div>
 
-                            <button id="add" type="submit"
+                            <button id="add" type="button"
                                     class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">
                                 Add Now
                             </button>
-                        </fieldset>
-                    </form>
+
                 </div>
 
             </div>

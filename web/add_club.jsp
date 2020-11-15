@@ -2,7 +2,7 @@
 <script>
 
     $( document ).ready(function() {
-        $('#upd').click(function () {
+        $('#btn').click(function () {
             var club = {};
             club.name = $('#name').val();
             club.leaderId = $('#leader_id').val();
@@ -33,10 +33,10 @@
 
                     <h3 class="bg-gray p-4">Add Club</h3>
 
-                            <input id="name" type="text" name="clubName" placeholder="clubName" class="border p-3 w-100 my-2">
-                            <input id="leader_id" type="text" name="leader_id" placeholder="leader_id" class="border p-3 w-100 my-2">
-                            <input id="logo" type="url" name="logo" placeholder="logo" class="border p-3 w-100 my-2">
-                            <input  id="desc" type="text" name="description" placeholder="description" class="border p-3 w-100 my-2">
+                            <input id="name" type="text" placeholder="clubName" class="border p-3 w-100 my-2">
+                            <input id="leader_id" type="text" placeholder="leader_id" class="border p-3 w-100 my-2">
+                            <input id="logo" type="url"  placeholder="logo" class="border p-3 w-100 my-2">
+                            <input  id="desc" type="text" placeholder="description" class="border p-3 w-100 my-2">
 
 
                             <button type="button" id="btn"  class="d-block py-1 px-3 bg-primary text-white border-0 rounded font-weight-bold mt-3" >Add
