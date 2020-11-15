@@ -1,7 +1,6 @@
 package servlets;
 
 import client.PostClient;
-import models.Post;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class EventServlet extends HttpServlet {
-    private final PostClient postControl = new PostClient();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -61,7 +59,7 @@ public class EventServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-      //  request.setAttribute("events", postControl.selectAll());
+      request.setAttribute("eventsALL", PostClient.getAll());
 
         request.getRequestDispatcher("event.jsp").forward(request, response);
     }
