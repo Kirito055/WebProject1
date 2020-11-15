@@ -4,8 +4,8 @@
     <form action="search" method="get" class="d-flex justify-content-around">
         <%--<input type="text" name="name" placeholder="Search by name">--%>
         <input list="users" name="user" onchange="onInput()" id="user" placeholder="Choose User">
-        <datalist id="users" >
-            <option  value="google.com">Google</option>
+        <datalist id="users">
+            <option value="google.com">Google</option>
         </datalist>
 
         <div>
@@ -27,10 +27,10 @@
         <div>
 
             <label for="grade">Grade:</label>
-            <select  name="grade" id="grade">
+            <select name="grade" id="grade">
                 <option value="0" selected>None</option>
                 <option value="1">1</option>
-                <option  value="2">2</option>
+                <option value="2">2</option>
                 <option value="3">3</option>
             </select>
         </div>
@@ -46,44 +46,65 @@
         <button>Search</button>
 
     </form>
-    <c:forEach items="${users}" var="user">
-        <div class="search-result">
+    <%--    <c:forEach items="${users}" var="user">--%>
+    <%--        <div class="search-result">--%>
 
+    <%--            <!--добавить сюда форич для вывода резулььтата-->--%>
+    <%--            <div class="res-card  ">--%>
+    <%--                <h4>${user.firstName}${" "}${user.lastName}</h4>--%>
+    <%--                <p>${user.group_id}/${user.grade}</p>--%>
+    <%--            </div>--%>
+    <%--        </div>--%>
+
+    <%--    </c:forEach>--%>
+    <%--    <h1>${message}</h1>--%>
+
+
+    <div class="search-result">
+        <c:forEach items="${users}" var="user">
             <!--добавить сюда форич для вывода резулььтата-->
-            <div class="res-card  ">
-                <h4>${user.firstName}${" "}${user.lastName}</h4>
-                <p>${user.group_id}/${user.grade}</p>
-            </div>
-        </div>
-    </c:forEach>
-    <h1>${message}</h1>
+
+            <a class="res-card" href="${pageContext.request.contextPath}/user?action=about&id=${user.id}">
+                <div class="search-image" style="background-image: url(${user.avatar});">
+                </div>
+                <div class="search-text">
+                    <h4>${user.firstName}${" "}${user.lastName}</h4>
+                    <p>${user.group_id}/${user.grade}</p>
+                </div>
+            </a>
+
+        </c:forEach>
+    </div>
+
 </div>
+
+
 <script>
     function onInput() {
         var val = document.getElementById("user").value;
         var opts = document.getElementById('users').childNodes;
         for (var i = 0; i < opts.length; i++) {
             if (opts[i].value === val) {
-                window.location.replace('/newproject_final_war_exploded/'+opts[i].value);
+                window.location.replace('/newproject_final_war_exploded/' + opts[i].value);
                 break;
             }
         }
     }
 </script>
 <script>
-    $( document ).ready(function() {
-        let userPoint ='http://localhost:8080/rest/users'
-        let groupPoint ='http://localhost:8080/rest/groups'
-        let facultyPoint ='http://localhost:8080/rest/groups/faculty'
+    $(document).ready(function () {
+        let userPoint = 'http://localhost:8080/rest/users'
+        let groupPoint = 'http://localhost:8080/rest/groups'
+        let facultyPoint = 'http://localhost:8080/rest/groups/faculty'
         $.ajax({
             url: userPoint,
             contentType: "application/json",
             dataType: 'json',
-            success: function(result){
+            success: function (result) {
                 var l = result.length;
-                for( i=0; i<l;i++) {
+                for (i = 0; i < l; i++) {
                     $('#users').append(
-                        '<option  name="id" value="'+'user?action=about&id='+result[i].id+'">'+result[i].firstName+' '+result[i].lastName+'</option>'
+                        '<option  name="id" value="' + 'user?action=about&id=' + result[i].id + '">' + result[i].firstName + ' ' + result[i].lastName + '</option>'
                     );
                 }
             }
@@ -92,11 +113,11 @@
             url: groupPoint,
             contentType: "application/json",
             dataType: 'json',
-            success: function(result){
+            success: function (result) {
                 var l = result.length;
-                for( i=0; i<l;i++) {
+                for (i = 0; i < l; i++) {
                     $('#groups').append(
-                        '<option  value="'+result[i].name+'">'+result[i].name+' - '+result[i].faculty+'</option>'
+                        '<option  value="' + result[i].name + '">' + result[i].name + ' - ' + result[i].faculty + '</option>'
                     );
                 }
             }
@@ -105,11 +126,11 @@
             url: facultyPoint,
             contentType: "application/json",
             dataType: 'json',
-            success: function(result){
+            success: function (result) {
                 var l = result.length;
-                for( i=0; i<l;i++) {
+                for (i = 0; i < l; i++) {
                     $('#faculty').append(
-                        '<option  value="'+result[i]+'">'+result[i]+'</option>'
+                        '<option  value="' + result[i] + '">' + result[i] + '</option>'
                     );
                 }
             }

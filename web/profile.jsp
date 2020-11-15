@@ -9,9 +9,9 @@
         <div class="row d-flex justify-content-between">
             <div>
                 <h4>${user.firstName}${" "}${user.lastName}</h4>
-                <strong>${group.faculty}</strong>
-                <p>${group.name}</p>
-                <p>${user.email}</p>
+                <strong>Faculty: ${group.faculty}</strong>
+                <p>Group: ${group.name}</p>
+                <p>Email: ${user.email}</p>
             </div>
             <div class="prof-img" style="background-image: url(${user.avatar});">
             </div>
