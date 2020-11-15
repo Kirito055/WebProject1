@@ -53,9 +53,17 @@
                                                     </a>
                                                 </li>
 
-                                                <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
-                                                <li><a href="post_form/update_post.jsp"> Update event </a></li>
+                                                <c:if test="${user.role=='admin'}">
+                                                    <div class="d-flex justify-content-around">
 
+                                                        <a id="remove"  href=""  class="btn btn-outline-danger">
+                                                            remove
+                                                        </a>
+                                                        <a id="update"  href="${pageContext.request.contextPath}/posts?action=edit&id=<c:out value="${event.id}"/>" class="btn btn-outline-success">
+                                                            update
+                                                        </a>
+                                                    </div>
+                                                </c:if>
                                             </ul>
                                         </div>
                                     </article>
