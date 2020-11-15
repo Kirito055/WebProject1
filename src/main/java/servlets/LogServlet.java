@@ -4,10 +4,7 @@ package servlets;
 import client.UserClient;
 import models.User;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 public class LogServlet extends HttpServlet {
@@ -20,7 +17,7 @@ public class LogServlet extends HttpServlet {
         User user = UserClient.login(email,password);
         if(user!=null){
             HttpSession session = request.getSession(true);
-            session.setAttribute("user",new User());
+            session.setAttribute("user",user);
             response.sendRedirect(request.getContextPath() + "/");
         }else{
             request.setAttribute("message", "error");
