@@ -1,3 +1,4 @@
+<%@ page import="models.User" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="library/header.jsp" %>
 <%--There we include header--%>
@@ -17,9 +18,11 @@
 </div>
 </section>
 -->
+
+
 <c:if test="${clubs!=null}">
     <div class="club-list">
-
+<c:set var="user" value="${sessionScope.user}" />
         <c:forEach var="club" items="${clubs}">
 
             <div class="club-card">
@@ -29,16 +32,17 @@
                     <p>
                         <c:out value="${club.description}"/>
                     </p>
+                    <c:if test="${user.role=='admin'}">
                     <div class="d-flex justify-content-around">
 
-                        <a href="" class="btn btn-outline-danger">
+                        <a id="remove"  href=""  class="btn btn-outline-danger">
                             remove
                         </a>
-                        <a href="" class="btn btn-outline-success">
+                        <a id="update"  href="${pageContext.request.contextPath}/clubs?action=edit&id=<c:out value="${club.id}"/>" class="btn btn-outline-success">
                             update
                         </a>
-
                     </div>
+                    </c:if>
                 </div>
 
             </div>

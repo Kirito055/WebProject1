@@ -20,7 +20,7 @@ public class LogServlet extends HttpServlet {
         User user = UserClient.login(email,password);
         if(user!=null){
             HttpSession session = request.getSession(true);
-            session.setAttribute("user",new User());
+            session.setAttribute("user", user);
             response.sendRedirect(request.getContextPath() + "/");
         }else{
             request.setAttribute("message", "error");
