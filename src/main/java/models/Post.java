@@ -10,7 +10,10 @@ public class Post {
     private long id;
     private String title;
     private String description;
-    private Date date;
+
+    private @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    Date date;
+
     private String image;
     private long userId;
     private long clubId;
@@ -36,7 +39,7 @@ public class Post {
         if (author == null) {
             author = UserClient.get(userId);
         }
-        if (club  == null) {
+        if (club == null) {
             club = ClubClient.get(clubId);
         }
 
@@ -67,7 +70,7 @@ public class Post {
         this.description = description;
     }
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     public Date getDate() {
         return date;
     }
