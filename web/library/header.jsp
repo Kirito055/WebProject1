@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slick.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nice-select.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title></title>
 </head>
 <body>
