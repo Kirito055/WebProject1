@@ -1,23 +1,22 @@
 package servlets;
 
-import db.DBConnection;
+import client.ClubClient;
 import models.Club;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.List;
 
 public class ClubServlet extends HttpServlet {
-    DBConnection db=new DBConnection();
+
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String button = request.getParameter("submit");
-        System.out.println(button);
+        /*
         switch (button) {
             case "add":
             {
@@ -30,47 +29,44 @@ public class ClubServlet extends HttpServlet {
                 request.setAttribute("crud", "c"+added);
                 break;
             }
-            case "Delete":
-            {
-                String bookId = request.getParameter("bookId");
-                int deleted = db.delete(bookId);
-                request.setAttribute("crud", "d"+deleted);
-                break;
-            }
-            case "Edit":
-            {
-                int clubId = Integer.parseInt(request.getParameter("clubId"));
-                String clubName = request.getParameter("clubName");
-                int leader_id = Integer.parseInt(request.getParameter("leader_id"));
-                String logo = request.getParameter("logo");
-                String description = request.getParameter("description");
-                int updated = db.updateClub(clubId, clubName,leader_id,logo,description);
-                request.setAttribute("crud", "u"+updated);
-                break;
-            }
-
-            default:
-            {
-                request.setAttribute("crud", "s0");
-                break;
-            }
-        }
-        doGet(request, response);
+         */
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try
-        {
-            Connection connection = db.getConnection();
-            ArrayList<Club> clubs = db.clubSelect(connection);
-            connection.close();
-            request.setAttribute("clubs", clubs);
+        String button = request.getParameter("action");
+        System.out.println(button);
+
+        if(button==null){
+            request.setAttribute("clubs",ClubClient.getAll());
+            request.getRequestDispatcher("club.jsp").forward(request, response);
         }
-        catch (SQLException exception)
-        {
-            exception.printStackTrace();
+        else {
+            if(button.equals("edit")){
+                long id = Long.parseLong(request.getParameter("id"));
+                Club club = ClubClient.get(id);
+                System.out.println(club);
+                request.setAttribute("clubs", club);
+                request.getRequestDispatcher("update_club.jsp").forward(request, response);
+            }
         }
-        request.getRequestDispatcher("club.jsp").forward(request, response);
+//        else {
+//            if(button.equals("edit")){
+//                long id = Long.parseLong(request.getParameter("id"));
+//                System.out.println(id);
+//                Club club = ClubClient.get(id);
+//                System.out.println(club);
+//                /*request.setAttribute("club",club);
+//                request.getRequestDispatcher("update_club.jsp").forward(request, response);*/
+//            }
+//            else if (button.equals("delete")) {
+//                String id = request.getParameter("id");
+////                ClubClient.delete(id);
+////                List<Club> clubs = ClubClient.getAll();
+////                request.setAttribute("clubs", clubs);
+//                request.getRequestDispatcher("jsp/pages/book.jsp").forward(request, response);
+//            }
+//
+//        }
     }
 }
