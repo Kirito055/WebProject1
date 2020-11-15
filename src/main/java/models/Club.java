@@ -46,4 +46,15 @@ public class Club {
     public String getDescription() {
         return description;
     }
+
+    @Override
+    public String toString() {
+        return "Club{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", leaderId=" + leaderId +
+                ", logo='" + logo + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
