@@ -1,28 +1,37 @@
 package servlets;
 
-import db.DBConnection;
+import client.ClubClient;
+import client.GroupClient;
+import client.UserClient;
 import models.Club;
+import models.Group;
 import models.User;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Stack;
-
+import java.util.List;
+@WebServlet(name = "userSerlvet", urlPatterns = "/user")
 public class UserServlet extends HttpServlet {
-    DBConnection db=new DBConnection();
+
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //Connection connection = db.getConnection();
-        //Stack<User> users = db.profileSelect();
-        //connection.close();
-        //System.out.println(users);
-        //request.setAttribute("users", users);
-        request.getRequestDispatcher("profile.jsp").forward(request, response);
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String action = req.getParameter("action");
+        switch (action){
+            case "about":{
+                int id = Integer.parseInt(req.getParameter("id"));
+                User user = UserClient.get(id);
+                Group group = GroupClient.getGroupByUserId(id);
+                List<Club> clubs = ClubClient.getClubsByUserId(id);
+                req.setAttribute("userOne",user);
+                req.setAttribute("group",group);
+                req.setAttribute("clubs",clubs);
+                req.getRequestDispatcher("profile.jsp").forward(req,resp);
+                break;
+            }
+        }
     }
 }
