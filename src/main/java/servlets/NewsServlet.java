@@ -1,5 +1,7 @@
 package servlets;
 
+import client.PostClient;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -7,13 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class NewsServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+    }@Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("newsAll", PostClient.getAll());
+
+        req.getRequestDispatcher("news.jsp").forward(req, resp);
     }
+
 }

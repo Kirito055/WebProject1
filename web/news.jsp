@@ -1,12 +1,12 @@
-<%@include file="library/header.jsp"%> <%--There we include header--%>
+<%@include file="library/header.jsp" %> <%--There we include header--%>
 <main>
     <!--? Hero Start -->
     <div class="slider-area ">
-        <div class="slider-height2 d-flex align-items-center" >
+        <div class="slider-height2 d-flex align-items-center">
             <div class="container">
-                <div class="row"  >
+                <div class="row">
                     <div class="col-xl-12">
-                        <div class="hero-cap hero-cap2 text-center" >
+                        <div class="hero-cap hero-cap2 text-center">
                             <h2>News</h2>
                         </div>
                     </div>
@@ -15,6 +15,7 @@
         </div>
     </div>
     <!-- Hero End -->
+
     <!--================Blog Area =================-->
     <section class="blog_area section-padding">
         <div class="container">
@@ -22,30 +23,52 @@
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
 
-                        <!--Post News-->
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>Day</h3>
-                                    <p>Mon</p><!--3 буквы!!!!-->
-                                </a>
-                            </div>
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="blog_details.html">
-                         <!--News Title--><h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
-                                </a>
-                         <!--News text--><p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Author name (Username) </a></li>
+                        <c:if test="${newsAll!=null}">
+                            <c:forEach items="${newsAll}" var="news">
+                                <c:if test="${news.type=='news'}">
+                                    <article class="blog_item">
+                                        <div class="blog_item_img">
+                                            <img class="card-img rounded-0" src="<c:out value="${news.image}"/>" alt="">
+                                            <a href="#" class="blog_item_date">
+                                                <!--
+                                                  <h3>Day</h3>
+                                                  <p>Mon</p>  3 буквы!!!!
+                                                  -->
+                                                <p><c:out value="${news.date}"/></p>
+                                            </a>
+                                        </div>
+                                        <div class="blog_details">
+                                            <a class="d-inline-block" href="blog_details.html">
+                                                <!--News Title-->
+                                                <h2 class="blog-head" style="color: #2d2d2d;">
+                                                    <c:out value="${news.title}"/>
+                                                </h2>
+                                            </a>
+                                            <!--News text-->
+                                            <p>
+                                                <c:out value="${news.description}"/>
+                                            </p>
+                                            <ul class="blog-info-link">
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-user"></i>
+                                                        <c:if test="${news.author ==null}">
+                                                            AITU department
+                                                        </c:if>
+                                                        <c:out value="${news.author.firstName} ${news.author.lastName}"/>
 
-                                    <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
-                                    <li><a href="post_form/update_post.jsp"> Update news  </a></li>
+                                                    </a>
+                                                </li>
 
-                                </ul>
-                            </div>
-                        </article>
+                                                <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
+                                                <li><a href="post_form/update_post.jsp"> Update event </a></li>
+
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </c:if>
+                            </c:forEach>
+                        </c:if>
 
                         <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
                         <article>
@@ -103,26 +126,6 @@
                             </form>
                         </aside>
 
-                        <!--category-->
-                        <aside class="single_sidebar_widget post_category_widget">
-                            <h4 class="widget_title" style="color: #2d2d2d;">Category</h4>
-                            <ul class="list cat-list">
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Category name</p>
-                                        <p>(count of news)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Example: Study news</p>
-                                        <p>(10)</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </aside>
-
                         <!--List of last 4 news-->
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
@@ -166,9 +169,10 @@
 
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
     <!--================Blog Area =================-->
 </main>
-<%@include file="library/footer.jsp"%> <%--There we include footer--%>
+<%@include file="library/footer.jsp" %> <%--There we include footer--%>
