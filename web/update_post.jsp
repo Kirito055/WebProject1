@@ -2,18 +2,21 @@
 <script>
     $( document ).ready(function() {
         $('#upd').click(function () {
-            var club = {};
-            club.id = $('#id').val();
-            club.name = $('#name').val();
-            club.leaderId = $('#leader_id').val();
-            club.logo = $('#logo').val();
-            club.description = $('#desc').val();
-            var clubJSON = JSON.stringify(club);
+            var post = {};
+            post.id = $('#id').val();
+            post.title = $('#title').val();
+            post.image = $('#image').val();
+            post.userId = $('#userId').val();
+            post.clubId = $('#clubId').val();
+            post.date = $('#date').val();
+            post.description = $('#description').val();
+            post.type = $('#type').val();
+            var postJson = JSON.stringify(post);
             $.ajax({
-                url: 'http://localhost:8080/rest/clubs/',
+                url: 'http://localhost:8080/rest/posts/',
                 method: "put",
                 contentType: "application/json",
-                data: clubJSON,
+                data: postJson,
                 success: function (result) {
                     alert(result)
                 },
@@ -23,11 +26,6 @@
             })
         })
     });
-
-
-
-
-
 </script>
 <section class="login py-5 border-top-1">
     <div class="container">
@@ -38,19 +36,33 @@
 
                     <h3 class="bg-gray p-4">Updating Club</h3>
                     <c:set var="club" value="${requestScope.clubs}"/>
+                    <form onsubmit="update()" method="post">
+                        <fieldset class="p-4">
+                            <input id="id" type="hidden" name="clubId" value="<c:out value="${club.id}"/>">
+                            <h3 class="bg-gray p-4">Updating Post</h3>
+                            <c:set var="post" value="${requestScope.posts}"/>
 
 
-                    <input id="id" type="hidden" name="clubId" value="<c:out value="${club.id}"/>">
+                            <input id="id" type="hidden" name="postId" value="<c:out value="${post.id}"/>">
 
-                    <input id="name" type="text" name="clubName" placeholder="clubName" class="border p-3 w-100 my-2" value="${club.name}">
-                    <input id="leader_id" type="text" name="leader_id" placeholder="leader_id" class="border p-3 w-100 my-2" value="<c:out value="${club.leader_id}"/>">
-                    <input id="logo" type="text" name="logo" placeholder="logo" class="border p-3 w-100 my-2" value="<c:out value="${club.logo}"/>">
-                    <input id="desc" type="text" name="description" placeholder="description" class="border p-3 w-100 my-2" value="<c:out value="${club.description}"/>">
+                            <input id="title" type="text" name="title" placeholder="title" class="border p-3 w-100 my-2" value="${post.title}">
+                            <input id="description" type="text" name="description" placeholder="leader_id" class="border p-3 w-100 my-2" value="<c:out value="${post.description}"/>">
+                            <input id="date" type="text" name="date" placeholder="date" class="border p-3 w-100 my-2" value="<c:out value="${post.date}"/>">
+                            <input id="image" type="text" name="image" placeholder="image" class="border p-3 w-100 my-2" value="<c:out value="${post.image}"/>">
+
+                            <input id="userId" type="text" name="userId" placeholder="userId" class="border p-3 w-100 my-2" value="<c:out value="${post.userId}"/>">
+
+                            <input id="clubId" type="text" name="clubId" placeholder="clubId" class="border p-3 w-100 my-2" value="<c:out value="${post.clubId}"/>">
+
+                            <input id="type" type="text" name="type" placeholder="type" class="border p-3 w-100 my-2" value="<c:out value="${post.type}"/>">
 
 
-                    <button type="button" id="upd" class="d-block py-1 px-3 bg-primary text-white border-0 rounded font-weight-bold mt-3">Update</button>
+                            <button type="button" id="upd" class="d-block py-1 px-3 bg-primary text-white border-0 rounded font-weight-bold mt-3">Update</button>
 
 
+                            <input type="submit" class="d-block py-1 px-3 bg-primary text-white border-0 rounded font-weight-bold mt-3" name="update" value="Update">
+                        </fieldset>
+                    </form>
                 </div>
 
             </div>
