@@ -64,10 +64,10 @@
                                                 <c:if test="${user.role=='admin'}">
                                                     <div class="d-flex justify-content-around">
 
-                                                        <a id="remove"  href=""  class="btn btn-outline-danger">
+                                                        <a id="remove"  href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}"  class="btn btn-outline-danger">
                                                             remove
                                                         </a>
-                                                        <a id="update"  href="${pageContext.request.contextPath}/posts?action=edit&id=<c:out value="${news.id}"/>" class="btn btn-outline-success">
+                                                        <a id="update"  href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>" class="btn btn-outline-success">
                                                             update
                                                         </a>
                                                     </div>
@@ -82,7 +82,7 @@
                         <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
                         <article>
                             <a class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                               type="button" href="post_form/add_post.jsp">
+                               type="button" href="add_post.jsp">
                                 Add news
                             </a>
                         </article>

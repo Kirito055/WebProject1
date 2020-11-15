@@ -1,15 +1,16 @@
+
 <%@include file="library/header.jsp"%>
 <script>
     $( document ).ready(function() {
         $('#upd').click(function () {
+
             var post = {};
             post.id = $('#id').val();
             post.title = $('#title').val();
             post.image = $('#image').val();
             post.userId = $('#userId').val();
             post.clubId = $('#clubId').val();
-            post.date = $('#date').val();
-            post.description = $('#description').val();
+            post.description = $('#desc').val();
             post.type = $('#type').val();
             var postJson = JSON.stringify(post);
             $.ajax({
@@ -19,9 +20,6 @@
                 data: postJson,
                 success: function (result) {
                     alert(result)
-                },
-                error: function (error) {
-                    alert("Something went wrong try again later")
                 }
             })
         })
@@ -33,42 +31,42 @@
             <div class="col-lg-5 col-md-8 align-item-center">
 
                 <div class="border border">
+                    <c:set var="post" value="${requestScope.post}"/>
+                    <h3 class="bg-gray p-4">Update Post</h3>
 
-                    <h3 class="bg-gray p-4">Updating Club</h3>
-                    <c:set var="club" value="${requestScope.clubs}"/>
-                    <form onsubmit="update()" method="post">
-                        <fieldset class="p-4">
-                            <input id="id" type="hidden" name="clubId" value="<c:out value="${club.id}"/>">
-                            <h3 class="bg-gray p-4">Updating Post</h3>
-                            <c:set var="post" value="${requestScope.posts}"/>
+                    <input id="id" type="hidden" value="<c:out value="${post.id}"/>" placeholder="news name" class="border p-3 w-100 my-2">
+                    <input id="title" type="text" value="<c:out value="${post.title}"/>"  class="border p-3 w-100 my-2">>
+                    <input id="desc" type="text" value="<c:out value="${post.description}"/>" placeholder="news desc" class="border p-3 w-100 my-2">
+                    <input id="image" type="text" value="${post.image}" placeholder="image link" class="border p-3 w-100 my-2">
 
+                    <input id="userId" type="text" value="<c:out value="${post.userId}"/>" >
+                    <input id="clubId" type="text" value="<c:out value="${post.clubId}"/>" >
 
-                            <input id="id" type="hidden" name="postId" value="<c:out value="${post.id}"/>">
+                    <select id="type" name="type" class="border p-3 w-100 my-2">
+                        <option value="news">news</option>
+                        <option value="post">post</option>
+                        <option value="event">event</option>
+                    </select>
 
-                            <input id="title" type="text" name="title" placeholder="title" class="border p-3 w-100 my-2" value="${post.title}">
-                            <input id="description" type="text" name="description" placeholder="leader_id" class="border p-3 w-100 my-2" value="<c:out value="${post.description}"/>">
-                            <input id="date" type="text" name="date" placeholder="date" class="border p-3 w-100 my-2" value="<c:out value="${post.date}"/>">
-                            <input id="image" type="text" name="image" placeholder="image" class="border p-3 w-100 my-2" value="<c:out value="${post.image}"/>">
+                    <!--прописать сюда jstl c:if если user_id==leader_id -->
+                    <div class="loggedin-forgot d-inline-flex my-3">
+                        <input type="checkbox" id="club" name="club" class="mt-1">
+                        <label for="club" class="px-2"> on club name</label>
+                    </div>
 
-                            <input id="userId" type="text" name="userId" placeholder="userId" class="border p-3 w-100 my-2" value="<c:out value="${post.userId}"/>">
+                    <button id="upd" type="button"
+                            class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">
+                        Update
+                    </button>
 
-                            <input id="clubId" type="text" name="clubId" placeholder="clubId" class="border p-3 w-100 my-2" value="<c:out value="${post.clubId}"/>">
-
-                            <input id="type" type="text" name="type" placeholder="type" class="border p-3 w-100 my-2" value="<c:out value="${post.type}"/>">
-
-
-                            <button type="button" id="upd" class="d-block py-1 px-3 bg-primary text-white border-0 rounded font-weight-bold mt-3">Update</button>
-
-
-                            <input type="submit" class="d-block py-1 px-3 bg-primary text-white border-0 rounded font-weight-bold mt-3" name="update" value="Update">
-                        </fieldset>
-                    </form>
                 </div>
 
             </div>
         </div>
     </div>
 </section>
+
+
 
 
 <%@include file="library/footer.jsp"%>

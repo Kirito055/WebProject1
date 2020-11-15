@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/slick.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/nice-select.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/club.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title></title>
@@ -52,6 +54,9 @@
 </div>
 -->
 <c:set var="user" value="${sessionScope.user}"/>
+<c:if test="${user==null}">
+    <c:redirect url="/login.jsp"/>
+</c:if>
 <!-- Preloader Start -->
 <header>
     <!-- Header Start -->
@@ -113,10 +118,10 @@
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="${pageContext.request.contextPath}/main.jsp">Home</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/news.jsp">News</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/event.jsp">Events</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/news">News</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/events">Events</a></li>
                                     <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/profile.jsp">Profile</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/user?action=about&id=${user.id}">Profile</a></li>
                                     <li>
                                         <a href="${pageContext.request.contextPath}/search.jsp" class="search-icon"
                                            aria-haspopup="true" aria-expanded="false">

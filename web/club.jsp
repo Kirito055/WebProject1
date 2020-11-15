@@ -35,7 +35,7 @@
                     <c:if test="${user.role=='admin'}">
                     <div class="d-flex justify-content-around">
 
-                        <a id="remove"  href=""  class="btn btn-outline-danger">
+                        <a id="remove"  href="${pageContext.request.contextPath}/clubs?action=delete&id=${club.id}"  class="btn btn-outline-danger">
                             remove
                         </a>
                         <a id="update"  href="${pageContext.request.contextPath}/clubs?action=edit&id=<c:out value="${club.id}"/>" class="btn btn-outline-success">
@@ -49,6 +49,14 @@
         </c:forEach>
 
     </div>
+</c:if>
+<c:if test="${user.role=='admin'}">
+<article>
+    <a class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+       type="button" href="${pageContext.request.contextPath}/add_club.jsp">
+        Add Club
+    </a>
+</article>
 </c:if>
 
 <%@include file="library/footer.jsp" %> <%--There we include footer--%>

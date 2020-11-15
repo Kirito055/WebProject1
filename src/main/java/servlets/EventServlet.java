@@ -1,8 +1,6 @@
 package servlets;
 
-import client.ClubClient;
 import client.PostClient;
-import models.Club;
 import models.Post;
 
 import javax.servlet.ServletException;
@@ -15,7 +13,6 @@ public class EventServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
     }
 
 
@@ -31,12 +28,20 @@ public class EventServlet extends HttpServlet {
         }
         else {
             if(button.equals("edit")){
+
                 long id = Long.parseLong(request.getParameter("id"));
                 Post post = PostClient.get(id);
                 System.out.println(post);
-                request.setAttribute("eventsALL", post);
+                request.setAttribute("post", post);
                 request.getRequestDispatcher("update_post.jsp").forward(request, response);
             }
+            else if(button.equals("delete")){
+                String id = request.getParameter("id");
+                PostClient.delete(id);
+                request.setAttribute("eventsALL", PostClient.getAll());
+                request.getRequestDispatcher("event.jsp").forward(request, response);
+            }
+
         }
     }
 }

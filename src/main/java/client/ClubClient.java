@@ -53,6 +53,7 @@ public class ClubClient {
     }
 
 
+
     public static Club get(long id){
         try {
             WebTarget target = getWebTarget();
@@ -62,5 +63,10 @@ public class ClubClient {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static void delete(String id){
+        WebTarget target = getWebTarget();
+        target.path(id).request().delete();
     }
 }
