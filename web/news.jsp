@@ -50,7 +50,7 @@
                                             </p>
                                             <ul class="blog-info-link">
                                                 <li>
-                                                    <a href="#">
+                                                    <a href="${pageContext.request.contextPath}/user?action=about&id=${news.author.id}">
                                                         <i class="fa fa-user"></i>
                                                         <c:if test="${news.author ==null}">
                                                             AITU department
@@ -65,10 +65,10 @@
                                                 <c:when test="${user.role=='admin'}">
                                                     <div class="d-flex justify-content-around">
 
-                                                        <a id="remove"  href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}"  class="btn btn-outline-danger">
+                                                        <a id="remove"  href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}" style="color: white"  class="btn btn-outline-danger">
                                                             remove
                                                         </a>
-                                                        <a id="update"  href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>" class="btn btn-outline-success">
+                                                        <a id="update"  href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>" style="color: white" class="btn btn-outline-success">
                                                             update
                                                         </a>
                                                     </div>
@@ -76,10 +76,10 @@
                                                 <c:when test="${user.id == news.author.id}">
                                                     <div class="d-flex justify-content-around">
 
-                                                        <a  href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}"  class="btn btn-outline-danger">
+                                                        <a  href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}" style="color: white"  class="btn btn-outline-danger">
                                                             remove
                                                         </a>
-                                                        <a   href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>" class="btn btn-outline-success">
+                                                        <a   href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>" style="color: white" class="btn btn-outline-success">
                                                             update
                                                         </a>
                                                     </div>
@@ -151,42 +151,17 @@
                         <!--List of last 4 news-->
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_1.png" alt="post">
-                                <div class="media-body">
-                                    <a href="blog_details.html">
-                                        <h3 style="color: #2d2d2d;">From life was you fish...</h3>
-                                    </a>
-                                    <p>January 12, 2019</p>
+                            <c:forEach var="post" items="${newsAll}" begin="0" end="3">
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_4.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3 style="color: #2d2d2d;">${post.title}</h3>
+                                        </a>
+                                        <p>${post.date}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_2.png" alt="post">
-                                <div class="media-body">
-                                    <a href="blog_details.html">
-                                        <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_3.png" alt="post">
-                                <div class="media-body">
-                                    <a href="blog_details.html">
-                                        <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_4.png" alt="post">
-                                <div class="media-body">
-                                    <a href="blog_details.html">
-                                        <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
+                            </c:forEach>
                         </aside>
 
                     </div>

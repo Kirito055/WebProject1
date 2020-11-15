@@ -112,8 +112,8 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo logo2 d-block d-lg-none">
-                            <a href="${pageContext.request.contextPath}index.jsp"><img
-                                    src="${pageContext.request.contextPath}/assets/img/logo/astanait.png" height="32"
+                            <a href="${pageContext.request.contextPath}/main.jsp"><img
+                                    src="https://astanait.edu.kz/wp-content/uploads/2020/05/aitu-logo-2-600x315.png" height="50"
                                     alt=""></a>
                         </div>
                         <!-- Main-menu -->
@@ -138,7 +138,23 @@
                     </div>
                     <!-- Mobile Menu -->
                     <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
+                        <div class="mobile_menu d-block d-lg-none">
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a href="${pageContext.request.contextPath}/main.jsp">Home</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/news">News</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/events">Events</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/user?action=about&id=${user.id}">Profile</a></li>
+                                    <li>
+                                        <a href="${pageContext.request.contextPath}/search.jsp" class="search-icon"
+                                           aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-search special-tag"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>

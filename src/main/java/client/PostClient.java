@@ -5,13 +5,12 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import models.Post;
 import org.glassfish.jersey.client.ClientConfig;
-
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 public class PostClient {
@@ -65,12 +64,12 @@ public class PostClient {
 
 
 
-    public static Stack<Post> getAll() {
+    public static Queue<Post> getAll() {
         try {
             WebTarget target = getWebTarget();
             String usersString = target.request().accept(MediaType.APPLICATION_JSON).get(String.class);
             ObjectMapper mapper = new ObjectMapper();
-            Stack<Post> posts = mapper.readValue(usersString, new TypeReference<Stack<Post>>(){} );
+            Queue<Post> posts = mapper.readValue(usersString, new TypeReference<Queue<Post>>(){} );
             return posts;
 
         } catch (Exception e) {

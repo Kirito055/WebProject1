@@ -250,7 +250,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">BEKISH ZAMIRA ERLANOVNA</a></h3>
+                            <h3><a href="https://sun9-20.userapi.com/c625326/v625326105/2583b/YZYa-WMnlLA.jpg">BEKISH ZAMIRA ERLANOVNA</a></h3>
                             <p>ICT</p>
                         </div>
                     </div>
@@ -267,7 +267,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">HAYMULDIN ASKAR GAZIZULY</a></h3>
+                            <h3><a href="https://pbs.twimg.com/media/ELxW6hfXYAAvSbH.jpg">HAYMULDIN ASKAR GAZIZULY</a></h3>
                             <p>Java developer</p>
                         </div>
                     </div>
@@ -284,7 +284,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">MANGLAYEV TALGAT TURANBEKULA</a></h3>
+                            <h3><a href="https://nu.edu.kz/wp-content/uploads/2020/06/IMG_58911-993x1024.jpg">MANGLAYEV TALGAT TURANBEKULY</a></h3>
                             <p>Advanced Java Programming</p>
                         </div>
                     </div>
@@ -301,7 +301,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">ALTYNBEK SERIKOVICH SEYTENOV</a></h3>
+                            <h3><a href="https://3pulse.com/uploads/images/20/13/93/2017/06/22/avatar_320x320.jpg">ALTYNBEK SERIKOVICH SEYTENOV</a></h3>
                             <p>ICT</p>
                         </div>
                     </div>

@@ -6,25 +6,6 @@
                 <!-- footer Heading -->
                 <div class="footer-heading">
                     <div class="row justify-content-between">
-                        <div class="col-xl-6 col-lg-7 col-md-10">
-                            <div class="footer-tittle2">
-                                <h4>Stay Updated</h4>
-                            </div>
-                            <!-- Form -->
-                            <div class="footer-form mb-50">
-                                <div id="mc_embed_signup">
-                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-                                        <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
-                                        <div class="form-icon">
-                                            <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
-                                                Subscribe Now
-                                            </button>
-                                        </div>
-                                        <div class="mt-10 info"></div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-xl-5 col-lg-5">
                             <div class="footer-tittle2">
                                 <h4>Let's Get Social</h4>

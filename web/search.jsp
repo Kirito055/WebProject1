@@ -57,7 +57,9 @@
                 </div>
                 <div class="text">
                     <h4>${user.firstName}${" "}${user.lastName}</h4>
-                    <p>${user.group_id}/${user.grade}</p>
+                    <p>Grade: ${user.grade}</p>
+                    <span>Birth date: ${user.birthDate}</span>
+                    <span></span>
                 </div>
             </a>
     </c:forEach>

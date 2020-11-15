@@ -46,7 +46,7 @@
                                             </p>
                                             <ul class="blog-info-link">
                                                 <li>
-                                                    <a href="#">
+                                                    <a href="${pageContext.request.contextPath}/user?action=about&id=${event.author.id}">
                                                         <i class="fa fa-user"></i>
                                                         <c:out value="${event.author.firstName} ${event.author.lastName}"/>
 
@@ -146,42 +146,17 @@
                         <!--List of last 4 news-->
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_1.png" alt="post">
-                                <div class="media-body">
-                                    <a href="blog_details.html">
-                                        <h3 style="color: #2d2d2d;">From life was you fish...</h3>
-                                    </a>
-                                    <p>January 12, 2019</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_2.png" alt="post">
-                                <div class="media-body">
-                                    <a href="blog_details.html">
-                                        <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_3.png" alt="post">
-                                <div class="media-body">
-                                    <a href="blog_details.html">
-                                        <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
+                            <c:forEach var="post" items="${eventsALL}" begin="0" end="3">
                             <div class="media post_item">
                                 <img src="assets/img/post/post_4.png" alt="post">
                                 <div class="media-body">
                                     <a href="blog_details.html">
-                                        <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
+                                        <h3 style="color: #2d2d2d;">${post.title}</h3>
                                     </a>
-                                    <p>01 Hours ago</p>
+                                    <p>${post.date}</p>
                                 </div>
                             </div>
+                            </c:forEach>
                         </aside>
 
                     </div>
