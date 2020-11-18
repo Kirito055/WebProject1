@@ -10,7 +10,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String password;
-    private @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="dd-MM-yyyy") Date birthDate;
+    private @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd") Date birthDate;
     private int grade;
     private long group_id;
     private String avatar;
@@ -90,7 +90,7 @@ public class User {
         this.password = password;
     }
 
-    @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
+    @JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
     public Date getBirthDate() {
         return birthDate;
     }

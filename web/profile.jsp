@@ -1,8 +1,7 @@
 <%@include file="library/header.jsp" %>
-<c:set var="user" value="${requestScope.user}"/>
+<c:set var="user1" value="${requestScope.user}"/>
 <c:set var="group" value="${requestScope.group}"/>
 <c:set var="clubs" value="${requestScope.clubs}"/>
-
 <div class="userbox" style="height: auto">
 
     <div class="box">
@@ -10,28 +9,30 @@
             <div class="col-lg-6 col-12">
                 <div class="row">
                     <div class="col-6">
-                        <h4>${user.firstName}${" "}${user.lastName}</h4>
-                        <p>Birthday: ${user.birthDate}</p>
+                        <h4>${user1.firstName}${" "}${user1.lastName}</h4>
+                        <p>Birthday: ${user1.birthDate}</p>
                     </div>
                     <div class="col-6">
                         <div class="prof-img d-block d-lg-none"
-                             style="background-image: url(${user.avatar});">
+                             style="background-image: url(${user1.avatar});">
                         </div>
                     </div>
                 </div>
 
                 <strong>Faculty: ${group.faculty}</strong>
                 <p>Group: ${group.name}</p>
-                <p>Email: ${user.email}</p>
+                <p>Email: ${user1.email}</p>
 
                 <!--if it ur profile jstl c:if through session id-->
+                <c:if test="${user.id==user1.id}">
                 <a id="remove"
                    href="${pageContext.request.contextPath}/update_profile.jsp"
                    style="color: white" class="btn  m-1">
                     update
                 </a>
+                </c:if>
             </div>
-            <div class="prof-img d-lg-block d-none" style="background-image: url(${user.avatar});">
+            <div class="prof-img d-lg-block d-none" style="background-image: url(${user1.avatar});">
             </div>
         </div>
     </div>
