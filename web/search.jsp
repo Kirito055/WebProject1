@@ -48,7 +48,7 @@
 
     </form>
     <div class="search-result">
-
+<c:set value="${requestScope.users}" var="users"/>
     <c:forEach items="${users}" var="user">
         <!--добавить сюда форич для вывода резулььтата-->
 
