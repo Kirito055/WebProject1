@@ -1,7 +1,7 @@
-<%@include file="library/header.jsp"%>
+<%@include file="library/header.jsp" %>
 <script>
 
-    $( document ).ready(function() {
+    $(document).ready(function () {
         $('#btn').click(function () {
             var club = {};
             club.name = $('#name').val();
@@ -29,18 +29,19 @@
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-8 align-item-center">
 
-                <div class="border border">
+                <div class="border border p-4">
 
-                    <h3 class="bg-gray p-4">Add Club</h3>
+                    <h3 class="bg-gray p-4 text-center">Add Club</h3>
 
-                            <input id="name" type="text" placeholder="clubName" class="border p-3 w-100 my-2">
-                            <input id="leader_id" type="text" placeholder="leader_id" class="border p-3 w-100 my-2">
-                            <input id="logo" type="url"  placeholder="logo" class="border p-3 w-100 my-2">
-                            <input  id="desc" type="text" placeholder="description" class="border p-3 w-100 my-2">
+                    <input id="name" type="text" placeholder="clubName" class="border p-3 w-100 my-2">
+                    <input id="leader_id" type="text" placeholder="leader_id" class="border p-3 w-100 my-2">
+                    <input id="logo" type="url" placeholder="logo" class="border p-3 w-100 my-2">
+                    <input id="desc" type="text" placeholder="description" class="border p-3 w-100 my-2">
 
 
-                            <button type="button" id="btn"  class="d-block py-1 px-3 bg-primary text-white border-0 rounded font-weight-bold mt-3" >Add
-                            </button>
+                    <button type="button" id="btn"
+                            class="d-block py-1 px-3 mx-auto bg-primary text-white border-0 rounded font-weight-bold mt-3">Add
+                    </button>
 
                 </div>
 
@@ -49,4 +50,4 @@
     </div>
 </section>
 
-<%@include file="library/footer.jsp"%>
+<%@include file="library/footer.jsp" %>

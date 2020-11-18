@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
-                    <div class="about-img ">
+                    <div class="about-img d-lg-block d-none">
                         <img src="assets/img/commisia.jpg" alt="">
                     </div>
                 </div>

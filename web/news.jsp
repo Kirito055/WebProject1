@@ -23,6 +23,16 @@
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
 
+                        <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
+                        <c:if test="${user.role=='admin'}">
+                            <article>
+                                <a class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn my-3"
+                                   type="button" href="add_post.jsp">
+                                    Add news
+                                </a>
+                            </article>
+                        </c:if>
+
                         <c:if test="${newsAll!=null}">
                             <c:forEach items="${newsAll}" var="news">
                                 <c:if test="${news.type=='news'}">
@@ -62,28 +72,34 @@
 
                                                 <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
                                                 <c:choose>
-                                                <c:when test="${user.role=='admin'}">
-                                                    <div class="d-flex justify-content-around">
+                                                    <c:when test="${user.role=='admin'}">
+                                                        <div class="d-flex justify-content-around flex-wrap">
 
-                                                        <a id="remove"  href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}" style="color: white"  class="btn btn-outline-danger">
-                                                            remove
-                                                        </a>
-                                                        <a id="update"  href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>" style="color: white" class="btn btn-outline-success">
-                                                            update
-                                                        </a>
-                                                    </div>
-                                                </c:when>
-                                                <c:when test="${user.id == news.author.id}">
-                                                    <div class="d-flex justify-content-around">
+                                                            <a id="remove"
+                                                               href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}"
+                                                               style="color: white" class="btn btn-outline-danger m-1">
+                                                                remove
+                                                            </a>
+                                                            <a id="update"
+                                                               href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>"
+                                                               style="color: white" class="btn btn-outline-success m-1">
+                                                                update
+                                                            </a>
+                                                        </div>
+                                                    </c:when>
+                                                    <c:when test="${user.id == news.author.id}">
+                                                        <div class="d-flex justify-content-around">
 
-                                                        <a  href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}" style="color: white"  class="btn btn-outline-danger">
-                                                            remove
-                                                        </a>
-                                                        <a   href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>" style="color: white" class="btn btn-outline-success">
-                                                            update
-                                                        </a>
-                                                    </div>
-                                                </c:when>
+                                                            <a href="${pageContext.request.contextPath}/news?action=delete&id=${news.id}"
+                                                               style="color: white" class="btn btn-outline-danger">
+                                                                remove
+                                                            </a>
+                                                            <a href="${pageContext.request.contextPath}/news?action=edit&id=<c:out value="${news.id}"/>"
+                                                               style="color: white" class="btn btn-outline-success">
+                                                                update
+                                                            </a>
+                                                        </div>
+                                                    </c:when>
                                                 </c:choose>
                                             </ul>
                                         </div>
@@ -92,15 +108,7 @@
                             </c:forEach>
                         </c:if>
 
-                        <!--прописать сюда jstl c:if если user_id==leader_id or admin-->
-                        <article>
-                            <a class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                               type="button" href="add_post.jsp">
-                                Add news
-                            </a>
-                        </article>
-
-                        <!--кнопки для перехода на другие страницы-->
+                        <!--кнопки для перехода на другие страницы
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                                 <li class="page-item">
@@ -121,7 +129,7 @@
                                 </li>
                             </ul>
                         </nav>
-
+                        -->
                     </div>
                 </div>
 
@@ -151,16 +159,20 @@
                         <!--List of last 4 news-->
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
+
                             <c:forEach var="post" items="${newsAll}" begin="0" end="3">
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_4.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">${post.title}</h3>
-                                        </a>
-                                        <p>${post.date}</p>
+
+                                    <div class="media post_item">
+                                        <img src="${post.image}" alt="post"
+                                             style="height: 10vmax;width: 10vmax; background: center/cover no-repeat">
+                                        <div class="media-body">
+                                            <a href="blog_details.html">
+                                                <h3 style="color: #2d2d2d;">${post.title}</h3>
+                                            </a>
+                                            <p>${post.date}</p>
+                                        </div>
                                     </div>
-                                </div>
+
                             </c:forEach>
                         </aside>
 
