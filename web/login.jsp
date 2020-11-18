@@ -53,7 +53,6 @@
                                 <div class="header-info-right">
                                     <ul>
                                         <li><a href="${pageContext.request.contextPath}/login.jsp"><i class="ti-user"></i>Login</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/register.jsp"><i class="ti-lock"></i>Register</a></li>
                                     </ul>
                                 </div>
                             </div>

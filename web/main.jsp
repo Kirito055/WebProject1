@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
-                    <div class="about-img ">
+                    <div class="about-img d-lg-block d-none">
                         <img src="assets/img/commisia.jpg" alt="">
                     </div>
                 </div>
@@ -250,7 +250,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">BEKISH ZAMIRA ERLANOVNA</a></h3>
+                            <h3><a href="https://sun9-20.userapi.com/c625326/v625326105/2583b/YZYa-WMnlLA.jpg">BEKISH ZAMIRA ERLANOVNA</a></h3>
                             <p>ICT</p>
                         </div>
                     </div>
@@ -267,7 +267,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">HAYMULDIN ASKAR GAZIZULY</a></h3>
+                            <h3><a href="https://pbs.twimg.com/media/ELxW6hfXYAAvSbH.jpg">HAYMULDIN ASKAR GAZIZULY</a></h3>
                             <p>Java developer</p>
                         </div>
                     </div>
@@ -284,7 +284,7 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">MANGLAYEV TALGAT TURANBEKULA</a></h3>
+                            <h3><a href="https://nu.edu.kz/wp-content/uploads/2020/06/IMG_58911-993x1024.jpg">MANGLAYEV TALGAT TURANBEKULY</a></h3>
                             <p>Advanced Java Programming</p>
                         </div>
                     </div>
@@ -301,140 +301,23 @@
                             </ul>
                         </div>
                         <div class="team-caption">
-                            <h3><a href="instructor.html">ALTYNBEK SERIKOVICH SEYTENOV</a></h3>
+                            <h3><a href="https://3pulse.com/uploads/images/20/13/93/2017/06/22/avatar_320x320.jpg">ALTYNBEK SERIKOVICH SEYTENOV</a></h3>
                             <p>ICT</p>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Section Button -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="browse-btn2 text-center mt-70">
-                        <a href="instructor.html" class="btn white-btn">View All Faculty</a>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 
     <!-- About Law End-->
     <!--? Testimonial Start -->
-    <div class="testimonial-area fix pt-180 pb-180 section-bg" data-background="assets/img/gallery/section_bg03.png">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-9 col-md-9">
-                    <div class="h1-testimonial-active">
-                        <!-- Single Testimonial -->
-                        <div class="single-testimonial pt-65">
-                            <!-- Testimonial tittle -->
-                            <div class="testimonial-icon mb-45">
-                                <img src="assets/img/gallery/testimonial.png" class="ani-btn " alt="">
-                            </div>
-                            <!-- Testimonial Content -->
-                            <div class="testimonial-caption text-center">
-                                <p>You can not succeed if you just do what others do and
-                                    follow the well-worn path. You need to create a new and
-                                    original path for yourself.</p>
-                                <!-- Rattion -->
-                                <div class="testimonial-ratting">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="rattiong-caption">
-                                    <span>Clifford Frazier<span> - Colorlib Themes</span> </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Testimonial -->
-                        <div class="single-testimonial pt-65">
-                            <!-- Testimonial tittle -->
-                            <div class="testimonial-icon mb-45">
-                                <img src="assets/img/gallery/testimonial.png" class="ani-btn " alt="">
-                            </div>
-                            <!-- Testimonial Content -->
-                            <div class="testimonial-caption text-center">
-                                <p>You can’t succeed if you just do what others do and
-                                    follow the well-worn path. You need to create a new and
-                                    original path for yourself. </p>
-                                <!-- Rattion -->
-                                <div class="testimonial-ratting">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="rattiong-caption">
-                                    <span>Clifford Frazier<span> - Colorlib Themes</span> </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Testimonial End -->
     <!--? Blog Area Start -->
-    <div class="home-blog-area section-padding30">
-        <div class="container">
-            <!-- Section Tittle -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-tittle text-center mb-50">
-                        <span>Our Latest News From Our Blog</span>
-                        <h2>Latest News From Blog</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="home-blog-single mb-30">
-                        <div class="blog-img-cap">
-                            <div class="blog-img">
-                                <img src="assets/img/gallery/home-blog1.png" alt="">
-                                <!-- Blog date -->
-                                <div class="blog-date text-center">
-                                    <span>24</span>
-                                    <p>Now</p>
-                                </div>
-                            </div>
-                            <div class="blog-cap">
-                                <p>| Properties</p>
-                                <h3><a href="blog_details.html">Footprints in Time is perfect House in Kurashiki</a>
-                                </h3>
-                                <a href="blog_details.html" class="more-btn">Read more »</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="home-blog-single mb-30">
-                        <div class="blog-img-cap">
-                            <div class="blog-img">
-                                <img src="assets/img/gallery/home-blog2.png" alt="">
-                                <!-- Blog date -->
-                                <div class="blog-date text-center">
-                                    <span>24</span>
-                                    <p>Now</p>
-                                </div>
-                            </div>
-                            <div class="blog-cap">
-                                <p>| Properties</p>
-                                <h3><a href="blog_details.html">Footprints in Time is perfect House in Kurashiki</a>
-                                </h3>
-                                <a href="blog_details.html" class="more-btn">Read more »</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Blog Area End -->
 </main>
 <%@include file="library/footer.jsp" %> <%--There we include footer--%>

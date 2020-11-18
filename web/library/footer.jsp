@@ -6,25 +6,6 @@
                 <!-- footer Heading -->
                 <div class="footer-heading">
                     <div class="row justify-content-between">
-                        <div class="col-xl-6 col-lg-7 col-md-10">
-                            <div class="footer-tittle2">
-                                <h4>Stay Updated</h4>
-                            </div>
-                            <!-- Form -->
-                            <div class="footer-form mb-50">
-                                <div id="mc_embed_signup">
-                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-                                        <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
-                                        <div class="form-icon">
-                                            <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
-                                                Subscribe Now
-                                            </button>
-                                        </div>
-                                        <div class="mt-10 info"></div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-xl-5 col-lg-5">
                             <div class="footer-tittle2">
                                 <h4>Let's Get Social</h4>
@@ -124,42 +105,42 @@
 
 <!-- JS here -->
 
-<script src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
-<script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="../assets/js/popper.min.js"></script>
-<script src="../assets/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/popper.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
 <!-- Jquery Mobile Menu -->
-<script src="../assets/js/jquery.slicknav.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery.slicknav.min.js"></script>
 
 <!-- Jquery Slick , Owl-Carousel Plugins -->
-<script src="../assets/js/owl.carousel.min.js"></script>
-<script src="../assets/js/slick.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/owl.carousel.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/slick.min.js"></script>
 <!-- One Page, Animated-HeadLin -->
-<script src="../assets/js/wow.min.js"></script>
-<script src="../assets/js/animated.headline.js"></script>
-<script src="../assets/js/jquery.magnific-popup.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/wow.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/animated.headline.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery.magnific-popup.js"></script>
 
 <!-- Date Picker -->
-<script src="../assets/js/gijgo.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/gijgo.min.js"></script>
 <!-- Nice-select, sticky -->
-<script src="../assets/js/jquery.nice-select.min.js"></script>
-<script src="../assets/js/jquery.sticky.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery.nice-select.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery.sticky.js"></script>
 
 <!-- counter , waypoint -->
-<script src="../assets/js/jquery.counterup.min.js"></script>
-<script src="../assets/js/waypoints.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery.counterup.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/waypoints.min.js"></script>
 
 <!-- contact js -->
-<script src="../assets/js/contact.js"></script>
-<script src="../assets/js/jquery.form.js"></script>
-<script src="../assets/js/jquery.validate.min.js"></script>
-<script src="../assets/js/mail-script.js"></script>
-<script src="../assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/contact.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery.form.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery.validate.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/mail-script.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery.ajaxchimp.min.js"></script>
 
 <!-- Jquery Plugins, main Jquery -->
-<script src="../assets/js/plugins.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/plugins.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/main.js"></script>
 
 </body>
 </html>

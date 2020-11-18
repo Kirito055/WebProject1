@@ -4,6 +4,7 @@ import client.PostClient;
 import models.Post;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,7 +19,12 @@ public class NewsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String button = request.getParameter("action");
         System.out.println(button);
-
+        Cookie[] cookies = request.getCookies();
+        for(Cookie cookie : cookies){
+            if(cookie.getName().equals("firstName")){
+                request.setAttribute("firstName", cookie.getValue());
+            }
+        }
         if(button==null){
             request.setAttribute("newsAll", PostClient.getAll());
             request.getRequestDispatcher("news.jsp").forward(request, response);

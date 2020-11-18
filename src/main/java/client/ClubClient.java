@@ -3,14 +3,13 @@ package client;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.glassfish.jersey.client.ClientConfig;
-
 import models.Club;
-
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
+import java.util.Stack;
 
 public class ClubClient {
     private static final String baseUri = "http://localhost:8080/rest/clubs/";
@@ -23,12 +22,12 @@ public class ClubClient {
     }
 
 
-    public static List<Club> getAll() {
+    public static Stack<Club> getAll() {
         try {
             WebTarget target = getWebTarget();
             String clubsString = target.request().accept(MediaType.APPLICATION_JSON).get(String.class);
             ObjectMapper mapper = new ObjectMapper();
-            List<Club> clubs = mapper.readValue(clubsString, new TypeReference<List<Club>>(){} );
+            Stack<Club> clubs = mapper.readValue(clubsString, new TypeReference<Stack<Club>>(){} );
             return clubs;
 
         } catch (Exception e) {
@@ -52,6 +51,11 @@ public class ClubClient {
         return null;
     }
 
+    public static void delete (String id) {
+        WebTarget target = getWebTarget();
+        target.path(id).request().delete();
+    }
+
 
 
     public static Club get(long id){
@@ -65,8 +69,4 @@ public class ClubClient {
         return null;
     }
 
-    public static void delete(String id){
-        WebTarget target = getWebTarget();
-        target.path(id).request().delete();
-    }
 }

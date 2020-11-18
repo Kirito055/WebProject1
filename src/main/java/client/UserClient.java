@@ -11,6 +11,7 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.LinkedList;
 import java.util.List;
 
 public class UserClient {
@@ -48,12 +49,12 @@ public class UserClient {
         return null;
     }
 
-    public static List<User> getUsersByClubId(long id){
+    public static LinkedList<User> getUsersByClubId(long id){
         try {
             WebTarget target = getWebTarget();
             String usersString = target.path("club/" + id).request().accept(MediaType.APPLICATION_JSON).get(String.class);
             ObjectMapper mapper = new ObjectMapper();
-            List<User> users = mapper.readValue(usersString, new TypeReference<List<User>>(){} );
+            LinkedList<User> users = mapper.readValue(usersString, new TypeReference<LinkedList<User>>(){} );
             return users;
         } catch (Exception e) {
             e.printStackTrace();

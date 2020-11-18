@@ -3,9 +3,7 @@ package client;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import models.Group;
-import models.User;
 import org.glassfish.jersey.client.ClientConfig;
-
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
