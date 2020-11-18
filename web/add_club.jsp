@@ -33,10 +33,10 @@
 
                     <h3 class="bg-gray p-4 text-center">Add Club</h3>
 
-                    <input id="name" type="text" placeholder="clubName" class="border p-3 w-100 my-2">
-                    <input id="leader_id" type="text" placeholder="leader_id" class="border p-3 w-100 my-2">
-                    <input id="logo" type="url" placeholder="logo" class="border p-3 w-100 my-2">
-                    <input id="desc" type="text" placeholder="description" class="border p-3 w-100 my-2">
+                    <input id="name" type="text" placeholder="Club Name" class="border p-3 w-100 my-2">
+                    <input id="leader_id" type="text" placeholder="Leader" class="border p-3 w-100 my-2">
+                    <input id="logo" type="url" placeholder="Logo" class="border p-3 w-100 my-2">
+                    <input id="desc" type="text" placeholder="Club Description" class="border p-3 w-100 my-2">
 
 
                     <button type="button" id="btn"

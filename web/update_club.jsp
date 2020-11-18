@@ -37,13 +37,13 @@
 
                     <input id="id" type="hidden" name="clubId" value="<c:out value="${club.id}"/>">
 
-                    <input id="name" type="text" name="clubName" placeholder="clubName" class="border p-3 w-100 my-2"
+                    <input id="name" type="text" name="clubName" placeholder="Club Name" class="border p-3 w-100 my-2"
                            value="${club.name}">
-                    <input id="leader_id" type="text" name="leader_id" placeholder="leader_id"
-                           class="border p-3 w-100 my-2" value="<c:out value="${club.leader_id}"/>">
-                    <input id="logo" type="text" name="logo" placeholder="logo" class="border p-3 w-100 my-2"
+                    <input id="leader_id" type="text" name="leader_id" placeholder="Leader"
+                           class="border p-3 w-100 my-2" value="<c:out value="${club.leader_id}"/>" hidden>
+                    <input id="logo" type="text" name="logo" placeholder="Logo" class="border p-3 w-100 my-2"
                            value="<c:out value="${club.logo}"/>">
-                    <input id="desc" type="text" name="description" placeholder="description"
+                    <input id="desc" type="text" name="description" placeholder="Club Description"
                            class="border p-3 w-100 my-2" value="<c:out value="${club.description}"/>">
 
                     <button type="button" id="upd"

@@ -40,6 +40,15 @@
             <label for="faculty">Faculty:</label>
             <select name="faculty" id="faculty">
                 <option value="none" selected>None</option>
+                <option value="Software Engineering" >Software Engineering</option>
+                <option value="Telecommunications Systems" >Telecommunications Systems</option>
+                <option value="Cybersecurity" >Cybersecurity</option>
+                <option value="Big Data Analysis" >Big Data Analysis</option>
+                <option value="Media Technologies" >Media Technologies</option>
+                <option value="IT Management">IT Management</option>
+                <option value="Industrial Automation" >Industrial Automation</option>
+                <option value="Computer Science" >Computer Science</option>
+
             </select>
         </div>
 

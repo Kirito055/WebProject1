@@ -36,22 +36,21 @@
                     <c:set var="user" value="${sessionScope.user}"/>
                     <h3 class="bg-gray text-center">Add Post</h3>
 
-                    <input id="title" type="text" name="name" placeholder="news name" class="border p-3 w-100 my-2">
-                    <input id="desc" type="text" name="desc" placeholder="news desc" class="border p-3 w-100 my-2">
-                    <input id="imglink" type="text" name="image" placeholder="image link" class="border p-3 w-100 my-2">
+                    <input id="title" type="text" name="name" placeholder="Title" class="border p-3 w-100 my-2">
+                    <input id="desc" type="text" name="desc" placeholder="Content" class="border p-3 w-100 my-2">
+                    <input id="imglink" type="text" name="image" placeholder="Image link" class="border p-3 w-100 my-2">
 
-                    <input id="user_id" type="text" value="<c:out value="${user.id}"/>">
+                    <input id="user_id" type="text" value="<c:out value="${user.id}"/>" hidden>
                     <select id="type" name="type" class="border px-3 w-100 my-2">
                         <option value="news">news</option>
-                        <option value="post">post</option>
                         <option value="event">event</option>
                     </select>
 
                     <!--прописать сюда jstl c:if если user_id==leader_id -->
-                    <div class="loggedin-forgot d-inline-flex my-3">
-                        <input type="checkbox" id="club" name="club" class="mt-1">
-                        <label for="club" class="px-2"> on club name</label>
-                    </div>
+<%--                    <div class="loggedin-forgot d-inline-flex my-3">--%>
+<%--                        <input type="checkbox" id="club" name="club" class="mt-1">--%>
+<%--                        <label for="club" class="px-2"> on club name</label>--%>
+<%--                    </div>--%>
 
                     <button id="add" type="button"
                             class="d-block py-3 px-4 mx-auto bg-primary text-white border-0 rounded font-weight-bold">

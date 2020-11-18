@@ -35,14 +35,14 @@
                     <h3 class="bg-gray p-4 text-center">Update Post</h3>
 
                     <input id="id" type="hidden" value="<c:out value="${post.id}"/>" placeholder="news name" class="border p-3 w-100 my-2">
-                    <input id="title" type="text" value="<c:out value="${post.title}"/>"  class="border p-3 w-100 my-2">
+                    <input id="title" type="text" value="<c:out value="${post.title}"/>"  placeholder="Title" class="border p-3 w-100 my-2">
 
                     <input id="desc" type="text" value="<c:out value="${post.description}"/>"
-                           placeholder="news desc" class="border p-3 w-100 my-2" height="200">
-                    <input id="image" type="text" value="${post.image}" placeholder="image link" class="border p-3 w-100 my-2">
+                           placeholder="Content" class="border p-3 w-100 my-2" height="200">
+                    <input id="image" type="text" value="${post.image}" placeholder="Image Link" class="border p-3 w-100 my-2">
 
-                    <input id="userId" type="text" value="<c:out value="${post.userId}"/>" >
-                    <input id="clubId" type="text" value="<c:out value="${post.clubId}"/>" >
+                    <input id="userId" type="text" value="<c:out value="${post.userId}"/>" hidden>
+                    <input id="clubId" type="text" value="<c:out value="${post.clubId}"/>" hidden>
 
                     <select id="type" name="type" class="border px-3 w-100 my-2">
                         <option value="news">news</option>
