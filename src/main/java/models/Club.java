@@ -1,30 +1,33 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Club {
-    private int id;
+    private long id;
     private String name;
-    private int leader_id;
+    private @JsonProperty("leaderId") long leaderId;
     private String logo;
     private String description;
 
-    public Club(String[] clubFields) {
-        if (clubFields.length == 5) {
-            this.id = Integer.parseInt(clubFields[0]);
-            this.name = clubFields[1];
-            this.leader_id = Integer.parseInt(clubFields[2]);
-            this.logo = clubFields[3];
-            this.description = clubFields[4];
-        }
+    public Club() {
     }
 
-    public Club(String name, int leader_id, String logo, String description) {
+    public Club(long id, String name, long leaderId, String logo, String description) {
+        this.id = id;
         this.name = name;
-        this.leader_id = leader_id;
+        this.leaderId = leaderId;
         this.logo = logo;
         this.description = description;
     }
 
-    public int getId() {
+    public Club(String name, long leaderId, String logo, String description) {
+        this.name = name;
+        this.leaderId = leaderId;
+        this.logo = logo;
+        this.description = description;
+    }
+
+    public long getId() {
         return id;
     }
 
@@ -32,8 +35,8 @@ public class Club {
         return name;
     }
 
-    public int getLeader_id() {
-        return leader_id;
+    public long getLeader_id() {
+        return leaderId;
     }
 
     public String getLogo() {
@@ -42,5 +45,16 @@ public class Club {
 
     public String getDescription() {
         return description;
+    }
+
+    @Override
+    public String toString() {
+        return "Club{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", leaderId=" + leaderId +
+                ", logo='" + logo + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

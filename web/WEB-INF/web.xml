@@ -16,7 +16,24 @@
         <res-auth>Container</res-auth>
     </resource-ref>
     
-    
+    <servlet>
+        <servlet-name>news</servlet-name>
+        <servlet-class>servlets.NewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>news</servlet-name>
+        <url-pattern>/news</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>events</servlet-name>
+        <servlet-class>servlets.EventServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>events</servlet-name>
+        <url-pattern>/events</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>clubs</servlet-name>
         <servlet-class>servlets.ClubServlet</servlet-class>
@@ -33,5 +50,14 @@
     <servlet-mapping>
         <servlet-name>log</servlet-name>
         <url-pattern>/log</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>search</servlet-name>
+        <servlet-class>servlets.SearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>search</servlet-name>
+        <url-pattern>/search</url-pattern>
     </servlet-mapping>
 </web-app>
