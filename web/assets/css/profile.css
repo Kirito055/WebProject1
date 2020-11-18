@@ -81,7 +81,7 @@
 @media(max-width:420px) {
     .userbox {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;  margin: 8% auto;
     }
     .box {
         padding: 10%;

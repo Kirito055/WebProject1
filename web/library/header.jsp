@@ -41,7 +41,7 @@
 </head>
 <body>
 <!--? Preloader Start -->
-<!--
+
 <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-inner position-relative">
@@ -52,11 +52,12 @@
         </div>
     </div>
 </div>
--->
+<!--
 <c:set var="user" value="${sessionScope.user}"/>
 <c:if test="${user==null}">
     <c:redirect url="/login.jsp"/>
 </c:if>
+-->
 <!-- Preloader Start -->
 <header>
     <!-- Header Start -->
@@ -88,11 +89,13 @@
                                             <c:set var="firstName" value="${requestScope.firstName}"/>
                                             <li><i class="">${firstName}</i>
                                             </li>
-                                            <li><a href="${pageContext.request.contextPath}/log"><i class="ti-user"></i>Log out</a>
+                                            <li><a href="${pageContext.request.contextPath}/log"><i class="ti-user"></i>Log
+                                                out</a>
                                             </li>
                                         </c:when>
                                         <c:otherwise>
-                                            <li><a href="${pageContext.request.contextPath}/login.jsp"><i class="ti-user"></i>Log in</a>
+                                            <li><a href="${pageContext.request.contextPath}/login.jsp"><i
+                                                    class="ti-user"></i>Log in</a>
                                             </li>
                                         </c:otherwise>
                                     </c:choose>
@@ -112,9 +115,11 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo logo2 d-block d-lg-none">
-                            <a href="${pageContext.request.contextPath}/main.jsp"><img
-                                    src="https://astanait.edu.kz/wp-content/uploads/2020/05/aitu-logo-2-600x315.png" height="50"
-                                    alt=""></a>
+                            <a href="${pageContext.request.contextPath}/main.jsp">
+                                <img src="https://astanait.edu.kz/wp-content/uploads/2020/05/aitu-logo-2-600x315.png"
+                                     height="45"
+                                     alt="">
+                            </a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
@@ -124,7 +129,8 @@
                                     <li><a href="${pageContext.request.contextPath}/news">News</a></li>
                                     <li><a href="${pageContext.request.contextPath}/events">Events</a></li>
                                     <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/user?action=about&id=${user.id}">Profile</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/user?action=about&id=${user.id}">Profile</a>
+                                    </li>
                                     <li>
                                         <a href="${pageContext.request.contextPath}/search.jsp" class="search-icon"
                                            aria-haspopup="true" aria-expanded="false">
@@ -134,28 +140,14 @@
                                 </ul>
                             </nav>
                         </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12 my-auto">
+                            <div class="mobile_menu d-block d-lg-none">
 
-                    </div>
-                    <!-- Mobile Menu -->
-                    <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none">
-                            <nav>
-                                <ul id="navigation">
-                                    <li><a href="${pageContext.request.contextPath}/main.jsp">Home</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/news">News</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/events">Events</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/clubs">Clubs</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/user?action=about&id=${user.id}">Profile</a></li>
-                                    <li>
-                                        <a href="${pageContext.request.contextPath}/search.jsp" class="search-icon"
-                                           aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-search special-tag"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
